@@ -862,26 +862,27 @@ footer p {
   }
 
   .site-header {
-    position: fixed;
+    position: relative;
     width: 100%;
   }
 
   .nav-wrap {
-    gap: 10px;
+    align-items: flex-start;
+    gap: 12px;
     min-height: 0;
     min-width: 0;
-    padding: 12px 0 10px;
+    padding: 14px 0 12px;
   }
 
   .brand img,
   .footer-logo img {
-    height: 30px;
+    height: 28px;
   }
 
   .nav-links {
-    display: grid;
-    gap: 7px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px 14px;
     max-width: 100%;
     min-width: 0;
     overflow: visible;
@@ -894,13 +895,12 @@ footer p {
   }
 
   .nav-links a {
-    background: rgba(143, 29, 44, 0.06);
-    border: 1px solid rgba(143, 29, 44, 0.1);
+    background: transparent;
+    border: 0;
     color: rgba(17, 17, 19, 0.82);
-    font-size: 10px;
+    font-size: 11px;
     min-width: 0;
-    padding: 8px 4px;
-    text-align: center;
+    padding: 0;
     white-space: nowrap;
   }
 
@@ -909,12 +909,13 @@ footer p {
   }
 
   .nav-links a.active {
-    background: rgba(143, 29, 44, 0.12);
     color: var(--crimson);
   }
 
   .nav-cta {
-    padding: 8px 4px !important;
+    padding: 0 !important;
+    background: transparent;
+    color: var(--crimson) !important;
   }
 
   main,
@@ -926,7 +927,7 @@ footer p {
   }
 
   .hero {
-    min-height: 780px;
+    min-height: 640px;
   }
 
   .page-hero {
@@ -937,18 +938,19 @@ footer p {
 
   .hero img,
   .page-hero img {
-    object-position: center center;
+    object-position: center top;
   }
 
   .hero-content {
-    min-height: 780px;
+    min-height: 640px;
     padding-bottom: 54px;
-    padding-top: 154px;
+    padding-top: 42px;
+    text-align: left;
   }
 
   .page-hero-content {
     min-height: 430px;
-    padding-top: 150px;
+    padding-top: 42px;
   }
 
   .hero-copy,
@@ -958,7 +960,7 @@ footer p {
   }
 
   h1 {
-    font-size: clamp(40px, 13vw, 52px);
+    font-size: clamp(38px, 12vw, 50px);
     line-height: 1.02;
   }
 
@@ -975,6 +977,10 @@ footer p {
   .join-actions {
     gap: 10px;
     margin-top: 24px;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
   }
 
   .button {
@@ -1056,14 +1062,14 @@ footer p {
 
   .nav-links a {
     font-size: 10px;
-    padding: 7px 9px;
+    padding: 0;
   }
 
   .hero {
-    min-height: 720px;
+    min-height: 600px;
   }
 
   .hero-content {
-    min-height: 720px;
+    min-height: 600px;
   }
 }
