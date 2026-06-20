@@ -330,8 +330,8 @@ section {
   display: grid;
   gap: clamp(36px, 5vw, 68px);
   grid-template-columns: minmax(260px, 0.92fr) minmax(320px, 1.08fr);
+  align-items: center;
 }
-
 .split-feature {
   align-items: center;
 }
