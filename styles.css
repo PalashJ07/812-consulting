@@ -811,3 +811,6 @@ footer p {
   height: 100%;
   object-fit: contain;
 }
+.section-white {
+  background: #ffffff;
+}
