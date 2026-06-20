@@ -699,3 +699,36 @@ footer p {
     transform: none;
   }
 }
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat-tile {
+  flex: 1 1 0;
+  min-width: 130px;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.stat-tile h3 {
+  font-size: 1.75rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.stat-tile p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .stat-row {
+    flex-wrap: wrap;
+  }
+  .stat-tile {
+    flex: 1 1 calc(50% - 1.5rem);
+  }
+}
