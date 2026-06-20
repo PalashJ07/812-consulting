@@ -98,7 +98,7 @@ a {
 .nav-links {
   align-items: center;
   display: flex;
-  gap: 26px;
+  gap: 18px;
 }
 
 .nav-links a {
@@ -108,6 +108,7 @@ a {
   letter-spacing: 0.04em;
   position: relative;
   transition: color 160ms ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
