@@ -792,8 +792,8 @@ footer p {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  gap: 28px;
-  max-width: 640px;
+  gap: 36px;
+  max-width: 760px;
   margin: 36px auto 0;
 }
 
@@ -801,11 +801,8 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
-  height: 100px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+  width: 200px;
+  height: 120px;
   padding: 18px;
 }
 
