@@ -98,12 +98,14 @@ a {
 .nav-links {
   align-items: center;
   display: flex;
+  flex-wrap: nowrap;
   gap: 18px;
+  min-width: 0;
 }
 
 .nav-links a {
   color: rgba(255, 255, 255, 0.86);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.04em;
   position: relative;
