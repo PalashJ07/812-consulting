@@ -1073,3 +1073,102 @@ footer p {
     min-height: 600px;
   }
 }
+
+@media (max-width: 700px) {
+  .site-header {
+    position: relative;
+  }
+
+  .nav-wrap {
+    padding: 14px 0;
+  }
+
+  .nav-links {
+    display: grid;
+    gap: 10px 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nav-links a {
+    font-size: 10px;
+    line-height: 1.1;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .nav-cta {
+    background: transparent !important;
+    color: var(--crimson) !important;
+  }
+
+  .hero,
+  .page-hero {
+    background: var(--soft-black);
+    color: #fff;
+    min-height: 0;
+  }
+
+  .hero::after,
+  .page-hero::after {
+    display: none;
+  }
+
+  .hero img,
+  .page-hero img {
+    height: auto;
+    inset: auto;
+    object-fit: contain;
+    object-position: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .hero-content,
+  .page-hero-content {
+    background:
+      linear-gradient(135deg, rgba(143, 29, 44, 0.24), transparent 30rem),
+      var(--soft-black);
+    min-height: 0;
+    padding: 34px 0 44px;
+    text-align: left;
+  }
+
+  .hero-copy,
+  .page-hero-copy {
+    margin: 0;
+  }
+
+  .hero .kicker,
+  .page-hero .kicker {
+    color: rgba(255, 255, 255, 0.76);
+  }
+
+  h1 {
+    font-size: clamp(34px, 10vw, 44px);
+    line-height: 1.04;
+  }
+
+  .lead {
+    font-size: 17px;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    font-size: 13px;
+  }
+
+  .section-grid,
+  .split-feature,
+  .explore {
+    gap: 28px;
+  }
+
+  .section-copy,
+  .rich-copy {
+    font-size: 16px;
+  }
+}
