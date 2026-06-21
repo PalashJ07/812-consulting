@@ -479,8 +479,12 @@ section {
 .about-stats {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 46px;
+}
+
+.project-model {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .model-stat,
