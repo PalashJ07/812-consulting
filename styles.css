@@ -576,6 +576,115 @@ section {
   margin-bottom: 0;
 }
 
+.members-section {
+  background: #fff;
+}
+
+.member-role-group {
+  border-top: 1px solid var(--line);
+  margin-top: 44px;
+  padding-top: 30px;
+}
+
+.member-role-group h3 {
+  color: var(--crimson);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.member-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.member-card {
+  background: transparent;
+  border: 0;
+  min-height: 310px;
+  outline: none;
+  perspective: 1000px;
+}
+
+.member-card-inner {
+  height: 100%;
+  min-height: 310px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 520ms ease;
+}
+
+.member-card:hover .member-card-inner,
+.member-card:focus .member-card-inner,
+.member-card:focus-within .member-card-inner {
+  transform: rotateY(180deg);
+}
+
+.member-card-face {
+  backface-visibility: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 32px rgba(17, 17, 19, 0.07);
+  display: flex;
+  flex-direction: column;
+  inset: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.member-card-front img {
+  aspect-ratio: 4 / 5;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+}
+
+.member-card-front div {
+  padding: 18px;
+}
+
+.member-card-front span {
+  color: var(--crimson);
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.member-card-front strong,
+.member-card-back strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.member-card-back {
+  background:
+    linear-gradient(135deg, rgba(143, 29, 44, 0.14), transparent 72%),
+    var(--soft-black);
+  color: #fff;
+  justify-content: center;
+  padding: 24px;
+  transform: rotateY(180deg);
+}
+
+.member-card-back strong {
+  margin-bottom: 18px;
+}
+
+.member-card-back p {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 0;
+}
+
 .faq-grid {
   display: grid;
   gap: 14px;
@@ -787,6 +896,7 @@ footer p {
   .service-grid,
   .timeline-grid,
   .post-grid,
+  .member-grid,
   .project-model,
   .about-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -979,6 +1089,7 @@ footer p {
   .service-grid,
   .timeline-grid,
   .post-grid,
+  .member-grid,
   .project-model,
   .about-stats {
     gap: 14px;
@@ -989,11 +1100,30 @@ footer p {
   .service-card,
   .timeline-card,
   .post-card,
+  .member-card,
   .contact-card,
   .model-stat,
   .about-stat {
     min-height: 0;
     padding: 22px;
+  }
+
+  .member-card {
+    padding: 0;
+  }
+
+  .member-card,
+  .member-card-inner {
+    min-height: 360px;
+  }
+
+  .member-card-front img {
+    height: 265px;
+  }
+
+  .member-role-group {
+    margin-top: 34px;
+    padding-top: 24px;
   }
 
   .about-stat strong,
