@@ -867,6 +867,44 @@ footer p {
   margin: 36px auto 0;
 }
 
+.past-clients-section {
+  background: #fff;
+}
+
+.client-logo-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 44px;
+}
+
+.client-logo-card {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(17, 17, 19, 0.04);
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  padding: 28px;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.client-logo-card:hover {
+  border-color: rgba(143, 29, 44, 0.28);
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.client-logo-card img {
+  max-height: 88px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 @media (max-width: 920px) {
   .site-header {
     position: relative;
@@ -1154,7 +1192,8 @@ footer p {
   }
 
   .logo-grid,
-  .logo-grid-center {
+  .logo-grid-center,
+  .client-logo-grid {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1166,6 +1205,15 @@ footer p {
     height: 86px;
     padding: 12px;
     width: 100%;
+  }
+
+  .client-logo-card {
+    height: 118px;
+    padding: 18px;
+  }
+
+  .client-logo-card img {
+    max-height: 72px;
   }
 
   .footer-grid {
