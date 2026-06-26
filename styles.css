@@ -1267,22 +1267,21 @@ footer p {
   position: relative;
 }
 
-.timeline-wrap::before {
+.timeline-nodes {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.timeline-nodes::before {
   content: "";
   position: absolute;
-  top: 50%;
   left: 0;
   right: 0;
   height: 2px;
   background: rgba(255,255,255,0.15);
+  top: 50%;
   transform: translateY(-50%);
-}
-
-.timeline-nodes {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  position: relative;
 }
 
 .tl-node {
@@ -1290,13 +1289,24 @@ footer p {
   flex-direction: column;
   align-items: center;
   flex: 1;
+  position: relative;
+}
+
+.tl-above {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.tl-below {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
 }
 
 .tl-card {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.14);
-  padding: 14px 12px;
-  width: 130px;
+  padding: 16px 14px;
+  width: 140px;
   text-align: center;
 }
 
@@ -1316,23 +1326,14 @@ footer p {
 .tl-card span {
   font-size: 11px;
   color: rgba(255,255,255,0.6);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .tl-stem {
   width: 2px;
-  height: 32px;
+  height: 40px;
   background: rgba(255,255,255,0.2);
   flex-shrink: 0;
-}
-
-.tl-stem--ghost {
-  background: transparent;
-}
-
-.tl-ghost {
-  width: 130px;
-  height: 80px;
 }
 
 .tl-dot {
@@ -1353,45 +1354,36 @@ footer p {
 }
 
 .tl-week {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  margin-top: 10px;
-}
-
-.tl-node--flip {
-  flex-direction: column-reverse;
-}
-
-.tl-node--flip .tl-week {
-  margin-top: 0;
-  margin-bottom: 10px;
+  color: rgba(255,255,255,0.5);
+  margin: 8px 0;
 }
 
 @media (max-width: 900px) {
-  .timeline-wrap::before {
+  .timeline-nodes {
+    flex-direction: column;
+    gap: 0;
+  }
+  .timeline-nodes::before {
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 20px;
     right: auto;
     width: 2px;
     height: 100%;
-    transform: translateX(-50%);
+    transform: none;
   }
-  .timeline-nodes {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .tl-node,
-  .tl-node--flip {
+  .tl-above,
+  .tl-below {
     flex-direction: row;
     align-items: center;
     gap: 12px;
+    margin-bottom: 16px;
   }
-  .tl-ghost { display: none; }
-  .tl-stem { width: 24px; height: 2px; }
-  .tl-card { width: 200px; }
-  .tl-week { margin: 0; }
+  .tl-stem { width: 20px; height: 2px; }
+  .tl-card { width: 200px; text-align: left; }
+  .tl-week { margin: 0; min-width: 70px; text-align: right; }
 }
