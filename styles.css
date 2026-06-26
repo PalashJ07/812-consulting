@@ -1369,8 +1369,7 @@ footer p {
   color: rgba(255,255,255,0.7);
   line-height: 1.5;
 }
-
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .timeline-nodes {
     grid-template-columns: 1fr;
     gap: 0;
@@ -1395,3 +1394,4 @@ footer p {
   .tl-week { margin: 0; min-width: 80px; }
   .tl-spacer { display: none; }
 }
+
