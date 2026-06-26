@@ -1279,7 +1279,7 @@ footer p {
   right: 0;
   height: 2px;
   background: rgba(255,255,255,0.15);
-  top: 280px;
+  top: 230px;
   z-index: 0;
 }
 .tl-node {
@@ -1293,6 +1293,7 @@ footer p {
   align-items: center;
   height: 500px;
   justify-content: flex-start;
+  padding-top: 10px;
 }
 .tl-below {
   display: flex;
@@ -1300,6 +1301,7 @@ footer p {
   align-items: center;
   height: 500px;
   justify-content: flex-end;
+  padding-bottom: 10px;
 }
 .tl-spacer {
   display: none;
@@ -1382,9 +1384,9 @@ footer p {
     margin-bottom: 24px;
     height: auto;
     justify-content: flex-start;
+    padding: 0;
   }
   .tl-stem { width: 20px; height: 2px; }
   .tl-card { width: auto; flex: 1; text-align: left; }
   .tl-week { margin: 0; min-width: 80px; }
 }
-
