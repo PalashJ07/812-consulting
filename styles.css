@@ -746,3 +746,120 @@ footer p {
     flex: 1 1 calc(50% - 2rem);
   }
 }
+.timeline-wrap {
+  margin-top: 44px;
+  position: relative;
+}
+.timeline-wrap::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-50%);
+}
+.timeline-nodes {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+}
+.tl-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.tl-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 14px 12px;
+  width: 130px;
+  text-align: center;
+}
+.tl-card.tl-crimson {
+  background: rgba(153,0,0,0.35);
+  border-color: var(--crimson);
+}
+.tl-card strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.tl-card span {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+}
+.tl-stem {
+  width: 2px;
+  height: 32px;
+  background: rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+.tl-stem--ghost {
+  background: transparent;
+}
+.tl-ghost {
+  width: 130px;
+  height: 80px;
+}
+.tl-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  border: 2px solid rgba(255,255,255,0.5);
+  flex-shrink: 0;
+  z-index: 1;
+}
+.tl-dot--major {
+  width: 16px;
+  height: 16px;
+  background: var(--crimson);
+  border: 2px solid #fff;
+}
+.tl-week {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-top: 10px;
+}
+.tl-node--flip {
+  flex-direction: column-reverse;
+}
+.tl-node--flip .tl-week {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+@media (max-width: 900px) {
+  .timeline-wrap::before {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+  .timeline-nodes {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .tl-node,
+  .tl-node--flip {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .tl-ghost { display: none; }
+  .tl-stem { width: 24px; height: 2px; }
+  .tl-card { width: 200px; }
+  .tl-week { margin: 0; }
+}
