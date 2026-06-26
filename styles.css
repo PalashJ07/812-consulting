@@ -1291,7 +1291,7 @@ footer p {
   justify-content: flex-end;
   position: absolute;
   top: 0;
-  height: 270px;
+  height: 300px;
 }
 
 .tl-below {
@@ -1369,29 +1369,7 @@ footer p {
   line-height: 1.5;
 }
 
-.tl-stem {
-  width: 2px;
-  height: 50px;
-  background: rgba(255,255,255,0.2);
-  flex-shrink: 0;
-}
 
-.tl-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.3);
-  border: 2px solid rgba(255,255,255,0.6);
-  flex-shrink: 0;
-  z-index: 2;
-}
-
-.tl-dot--major {
-  width: 20px;
-  height: 20px;
-  background: var(--crimson);
-  border: 3px solid #fff;
-}
 
 @media (max-width: 900px) {
   .timeline-nodes {
