@@ -1299,9 +1299,9 @@ footer p {
 .tl-above {
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 0;
   position: absolute;
   top: 0;
+  padding-bottom: 10px;
 }
 
 .tl-below {
@@ -1309,6 +1309,7 @@ footer p {
   justify-content: flex-start;
   position: absolute;
   bottom: 0;
+  padding-top: 10px;
 }
 
 .tl-node:nth-child(1) { left: 0%; transform: translateX(0); }
