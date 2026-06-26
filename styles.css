@@ -1270,9 +1270,8 @@ footer p {
 .timeline-nodes {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   position: relative;
-  min-height: 460px;
+  min-height: 480px;
 }
 
 .timeline-nodes::before {
@@ -1282,29 +1281,49 @@ footer p {
   right: 0;
   height: 2px;
   background: rgba(255,255,255,0.15);
-  top: 320px;
+  top: 310px;
   z-index: 0;
 }
 
-.tl-above {
+.tl-node {
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.tl-above {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: flex-end;
   position: absolute;
   top: 0;
-  height: 300px;
+  height: 290px;
+  flex: 1;
 }
 
 .tl-below {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
   position: absolute;
   bottom: 0;
   height: 160px;
+  flex: 1;
 }
+
+.tl-node:nth-child(1) { left: 0%; transform: translateX(0); }
+.tl-node:nth-child(2) { left: 25%; transform: translateX(-50%); }
+.tl-node:nth-child(3) { left: 50%; transform: translateX(-50%); }
+.tl-node:nth-child(4) { left: 75%; transform: translateX(-50%); }
+.tl-node:nth-child(5) { left: 100%; transform: translateX(-100%); }
 
 .tl-stem {
   width: 2px;
-  height: 70px;
+  height: 60px;
   background: rgba(255,255,255,0.2);
   flex-shrink: 0;
 }
@@ -1324,13 +1343,8 @@ footer p {
   height: 20px;
   background: var(--crimson);
   border: 3px solid #fff;
+  border-radius: 50%;
 }
-
-.tl-node:nth-child(1) { left: 0%; transform: translateX(0); }
-.tl-node:nth-child(2) { left: 25%; transform: translateX(-50%); }
-.tl-node:nth-child(3) { left: 50%; transform: translateX(-50%); }
-.tl-node:nth-child(4) { left: 75%; transform: translateX(-50%); }
-.tl-node:nth-child(5) { left: 100%; transform: translateX(-100%); }
 
 .tl-week {
   font-size: 13px;
@@ -1340,6 +1354,7 @@ footer p {
   color: #ffffff;
   margin-bottom: 12px;
   white-space: nowrap;
+  text-align: center;
 }
 
 .tl-card {
@@ -1368,8 +1383,6 @@ footer p {
   color: rgba(255,255,255,0.7);
   line-height: 1.5;
 }
-
-
 
 @media (max-width: 900px) {
   .timeline-nodes {
@@ -1401,6 +1414,8 @@ footer p {
     gap: 14px;
     margin-bottom: 24px;
     width: 100%;
+    height: auto !important;
+    justify-content: flex-start;
   }
   .tl-stem { width: 20px; height: 2px; }
   .tl-card { width: auto; flex: 1; text-align: left; }
