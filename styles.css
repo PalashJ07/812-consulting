@@ -1268,10 +1268,9 @@ footer p {
 }
 
 .timeline-nodes {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   position: relative;
-  min-height: 480px;
 }
 
 .timeline-nodes::before {
@@ -1281,7 +1280,7 @@ footer p {
   right: 0;
   height: 2px;
   background: rgba(255,255,255,0.15);
-  top: 310px;
+  top: calc(50% - 1px);
   z-index: 0;
 }
 
@@ -1289,42 +1288,28 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
-  position: relative;
 }
 
 .tl-above {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  position: absolute;
-  top: 0;
-  height: 290px;
-  flex: 1;
 }
 
 .tl-below {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
-  justify-content: flex-start;
-  position: absolute;
-  bottom: 0;
-  height: 160px;
+}
+
+.tl-spacer {
   flex: 1;
 }
 
-.tl-node:nth-child(1) { left: 0%; transform: translateX(0); }
-.tl-node:nth-child(2) { left: 25%; transform: translateX(-50%); }
-.tl-node:nth-child(3) { left: 50%; transform: translateX(-50%); }
-.tl-node:nth-child(4) { left: 75%; transform: translateX(-50%); }
-.tl-node:nth-child(5) { left: 100%; transform: translateX(-100%); }
-
 .tl-stem {
   width: 2px;
-  height: 60px;
-  background: rgba(255,255,255,0.2);
+  height: 50px;
+  background: rgba(255,255,255,0.25);
   flex-shrink: 0;
 }
 
@@ -1336,6 +1321,7 @@ footer p {
   border: 3px solid #fff;
   flex-shrink: 0;
   z-index: 2;
+  position: relative;
 }
 
 .tl-dot--major {
@@ -1352,7 +1338,7 @@ footer p {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin: 10px 0;
   white-space: nowrap;
   text-align: center;
 }
@@ -1361,7 +1347,7 @@ footer p {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.14);
   padding: 20px 16px;
-  width: 160px;
+  width: 150px;
   text-align: center;
 }
 
@@ -1386,11 +1372,8 @@ footer p {
 
 @media (max-width: 900px) {
   .timeline-nodes {
-    flex-direction: column;
-    min-height: unset;
+    grid-template-columns: 1fr;
     gap: 0;
-    align-items: flex-start;
-    padding-left: 40px;
   }
   .timeline-nodes::before {
     top: 0;
@@ -1399,25 +1382,16 @@ footer p {
     right: auto;
     width: 2px;
     height: 100%;
-    transform: none;
   }
-  .tl-node,
   .tl-above,
   .tl-below {
-    position: relative;
-    left: auto !important;
-    top: auto !important;
-    bottom: auto !important;
-    transform: none !important;
     flex-direction: row;
     align-items: center;
     gap: 14px;
     margin-bottom: 24px;
-    width: 100%;
-    height: auto !important;
-    justify-content: flex-start;
   }
   .tl-stem { width: 20px; height: 2px; }
   .tl-card { width: auto; flex: 1; text-align: left; }
   .tl-week { margin: 0; min-width: 80px; }
+  .tl-spacer { display: none; }
 }
