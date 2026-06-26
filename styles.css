@@ -1266,13 +1266,12 @@ footer p {
   margin-top: 60px;
   position: relative;
 }
-
 .timeline-nodes {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   position: relative;
+  min-height: 500px;
 }
-
 .timeline-nodes::before {
   content: "";
   position: absolute;
@@ -1280,40 +1279,37 @@ footer p {
   right: 0;
   height: 2px;
   background: rgba(255,255,255,0.15);
-  top: 50%;
-  transform: translateY(-50%);
+  top: 280px;
   z-index: 0;
 }
-
 .tl-node {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .tl-above {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 500px;
+  justify-content: flex-start;
 }
-
 .tl-below {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 500px;
+  justify-content: flex-end;
 }
-
 .tl-spacer {
-  flex: 1;
+  display: none;
 }
-
 .tl-stem {
   width: 2px;
   height: 50px;
   background: rgba(255,255,255,0.25);
   flex-shrink: 0;
 }
-
 .tl-dot {
   width: 20px;
   height: 20px;
@@ -1324,7 +1320,6 @@ footer p {
   z-index: 2;
   position: relative;
 }
-
 .tl-dot--major {
   width: 20px;
   height: 20px;
@@ -1332,7 +1327,6 @@ footer p {
   border: 3px solid #fff;
   border-radius: 50%;
 }
-
 .tl-week {
   font-size: 13px;
   font-weight: 800;
@@ -1343,7 +1337,6 @@ footer p {
   white-space: nowrap;
   text-align: center;
 }
-
 .tl-card {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.14);
@@ -1351,12 +1344,10 @@ footer p {
   width: 150px;
   text-align: center;
 }
-
 .tl-card.tl-crimson {
   background: rgba(153,0,0,0.35);
   border-color: var(--crimson);
 }
-
 .tl-card strong {
   display: block;
   font-size: 15px;
@@ -1364,7 +1355,6 @@ footer p {
   color: #fff;
   margin-bottom: 8px;
 }
-
 .tl-card span {
   font-size: 13px;
   color: rgba(255,255,255,0.7);
@@ -1374,6 +1364,7 @@ footer p {
   .timeline-nodes {
     grid-template-columns: 1fr;
     gap: 0;
+    min-height: unset;
   }
   .timeline-nodes::before {
     top: 0;
@@ -1389,10 +1380,11 @@ footer p {
     align-items: center;
     gap: 14px;
     margin-bottom: 24px;
+    height: auto;
+    justify-content: flex-start;
   }
   .tl-stem { width: 20px; height: 2px; }
   .tl-card { width: auto; flex: 1; text-align: left; }
   .tl-week { margin: 0; min-width: 80px; }
-  .tl-spacer { display: none; }
 }
 
