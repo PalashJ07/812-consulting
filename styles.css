@@ -1279,7 +1279,7 @@ footer p {
   right: 0;
   height: 2px;
   background: rgba(255,255,255,0.15);
-  top: calc(100% - 44px);
+  top: calc(100% - 40px);
   z-index: 0;
 }
 .tl-item {
