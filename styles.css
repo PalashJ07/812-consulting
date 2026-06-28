@@ -179,6 +179,10 @@ a {
   animation: heroZoom 1100ms ease-out both;
 }
 
+.join-hero img {
+  object-position: center 62%;
+}
+
 .hero::after,
 .page-hero::after {
   background:
@@ -1058,6 +1062,10 @@ footer p {
 
   .page-hero img {
     object-position: center 24%;
+  }
+
+  .join-hero img {
+    object-position: center 58%;
   }
 
   .hero::after,
