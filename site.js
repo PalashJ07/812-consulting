@@ -11,7 +11,7 @@ updateHeaderState();
 window.addEventListener("scroll", updateHeaderState, { passive: true });
 
 const revealTargets = document.querySelectorAll(
-  "main section:not(.hero):not(.page-hero), .service-card, .info-card, .timeline-card, .post-card, .model-stat, .about-stat, details, .photo-frame, .join-panel, .contact-card, .quote-panel"
+  "main section:not(.hero):not(.page-hero):not(.members-section), .service-card, .info-card, .timeline-card, .post-card, .model-stat, .about-stat, details, .photo-frame, .join-panel, .contact-card, .quote-panel"
 );
 
 revealTargets.forEach((element) => {
