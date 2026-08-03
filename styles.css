@@ -183,6 +183,15 @@ a {
   object-position: center 62%;
 }
 
+.about-hero,
+.about-hero .page-hero-content {
+  min-height: 360px;
+}
+
+.about-hero + .members-section {
+  padding-top: 42px;
+}
+
 .hero::after,
 .page-hero::after {
   background:
@@ -899,6 +908,138 @@ footer p {
   background: #fff;
 }
 
+.story-hero img {
+  object-position: center 42%;
+}
+
+.about-story-section {
+  background: #fff;
+}
+
+.about-story-grid {
+  display: grid;
+  gap: clamp(44px, 7vw, 110px);
+  grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr);
+}
+
+.about-impact-section {
+  background: linear-gradient(180deg, #fff 0%, #fff 48%, var(--paper) 48%, var(--paper) 100%);
+  padding-top: 0;
+}
+
+.impact-layout {
+  align-items: end;
+  display: grid;
+  gap: 0;
+  grid-template-columns: minmax(320px, 0.82fr) minmax(360px, 1.18fr);
+}
+
+.impact-card {
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(17, 17, 19, 0.1);
+  margin-bottom: 42px;
+  padding: clamp(30px, 4vw, 52px);
+  position: relative;
+  z-index: 2;
+}
+
+.impact-stats {
+  display: grid;
+  gap: 28px 34px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 30px;
+}
+
+.impact-stats strong {
+  color: var(--crimson);
+  display: block;
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 0.95;
+}
+
+.impact-stats span {
+  color: var(--muted);
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: 8px;
+}
+
+.impact-photo {
+  margin-left: -36px;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.impact-photo img {
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: center 28%;
+  width: 100%;
+}
+
+.about-pillars {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 44px;
+}
+
+.about-pillar {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  padding: 32px;
+}
+
+.about-pillar span {
+  color: var(--crimson);
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 46px;
+}
+
+.about-pillar p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.about-feature-section {
+  background: #fff;
+}
+
+.about-feature-grid {
+  align-items: center;
+  display: grid;
+  gap: clamp(34px, 6vw, 82px);
+  grid-template-columns: minmax(300px, 0.95fr) minmax(320px, 1.05fr);
+}
+
+.about-feature-photo {
+  overflow: hidden;
+}
+
+.about-feature-photo img {
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  object-position: center 34%;
+  width: 100%;
+}
+
+.about-feature-copy {
+  background: var(--paper);
+  padding: clamp(30px, 5vw, 62px);
+}
+
+.about-feature-copy p {
+  color: var(--muted);
+  font-size: 17px;
+  margin: 22px 0 28px;
+}
+
 .client-logo-grid {
   display: grid;
   gap: 18px;
@@ -954,8 +1095,24 @@ footer p {
 
   .section-grid,
   .split-feature,
+  .about-story-grid,
+  .impact-layout,
+  .about-feature-grid,
   .explore {
     grid-template-columns: 1fr;
+  }
+
+  .impact-card {
+    margin-bottom: 0;
+  }
+
+  .impact-photo {
+    margin-left: 0;
+    min-height: 360px;
+  }
+
+  .impact-photo img {
+    min-height: 360px;
   }
 
   .card-grid,
@@ -964,6 +1121,7 @@ footer p {
   .post-grid,
   .member-grid,
   .project-model,
+  .about-pillars,
   .about-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1068,6 +1226,15 @@ footer p {
     object-position: center 58%;
   }
 
+  .about-hero,
+  .about-hero .page-hero-content {
+    min-height: 300px;
+  }
+
+  .about-hero + .members-section {
+    padding-top: 32px;
+  }
+
   .hero::after,
   .page-hero::after {
     background:
@@ -1144,6 +1311,9 @@ footer p {
 
   .section-grid,
   .split-feature,
+  .about-story-grid,
+  .impact-layout,
+  .about-feature-grid,
   .explore {
     gap: 28px;
   }
@@ -1161,9 +1331,40 @@ footer p {
   .post-grid,
   .member-grid,
   .project-model,
+  .about-pillars,
   .about-stats {
     gap: 14px;
     grid-template-columns: 1fr;
+  }
+
+  .about-impact-section {
+    background: var(--paper);
+  }
+
+  .impact-card {
+    box-shadow: 0 14px 34px rgba(17, 17, 19, 0.08);
+    padding: 28px;
+  }
+
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-photo,
+  .impact-photo img {
+    min-height: 300px;
+  }
+
+  .about-pillar {
+    padding: 26px;
+  }
+
+  .about-pillar span {
+    margin-bottom: 28px;
+  }
+
+  .about-feature-copy {
+    padding: 28px;
   }
 
   .info-card,
