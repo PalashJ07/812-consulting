@@ -177,7 +177,7 @@ a {
 
 .hero img {
   animation: heroZoom 1100ms ease-out both;
-  object-position: center 15%;
+  object-position: center 70%;
 }
 
 .join-hero img {
