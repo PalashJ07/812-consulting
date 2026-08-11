@@ -158,7 +158,7 @@ a {
 }
 
 .hero {
-  min-height: 118vh;
+  min-height: 130vh;
 }
 
 .page-hero {
@@ -177,7 +177,7 @@ a {
 
 .hero img {
   animation: heroZoom 1100ms ease-out both;
-  object-position: center 50%;
+  object-position: center 20%;
 }
 
 .join-hero img {
