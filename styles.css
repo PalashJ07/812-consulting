@@ -197,13 +197,13 @@ a {
 }
 
 .faq-hero img {
-  object-position: center 28%;
+  object-position: center 20%;
 }
 
 .story-hero,
 .members-hero,
 .faq-hero {
-  min-height: 760px;
+  min-height: 800px;
 }
 
 .about-hero,
@@ -937,7 +937,7 @@ footer p {
 }
 
 .story-hero img {
-  object-position: center 24%;
+  object-position: center 14%;
 }
 
 .about-story-section {
@@ -1259,7 +1259,7 @@ footer p {
 
   .members-hero img,
   .story-hero img {
-    object-position: center 24%;
+    object-position: center 14%;
   }
 
   .contact-hero img {
@@ -1267,7 +1267,7 @@ footer p {
   }
 
   .faq-hero img {
-    object-position: center 28%;
+    object-position: center 20%;
   }
 
   .about-hero,
@@ -1281,7 +1281,7 @@ footer p {
   .story-hero .page-hero-content,
   .members-hero .page-hero-content,
   .faq-hero .page-hero-content {
-    min-height: 540px;
+    min-height: 580px;
   }
 
   .about-hero + .members-section {
