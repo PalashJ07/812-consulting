@@ -177,6 +177,7 @@ a {
 
 .hero img {
   animation: heroZoom 1100ms ease-out both;
+  object-position: center 18%;
 }
 
 .join-hero img {
@@ -196,13 +197,13 @@ a {
 }
 
 .faq-hero img {
-  object-position: center 70%;
+  object-position: center 34%;
 }
 
 .story-hero,
 .members-hero,
 .faq-hero {
-  min-height: 680px;
+  min-height: 760px;
 }
 
 .about-hero,
@@ -936,7 +937,7 @@ footer p {
 }
 
 .story-hero img {
-  object-position: center 66%;
+  object-position: center 30%;
 }
 
 .about-story-section {
@@ -1258,7 +1259,7 @@ footer p {
 
   .members-hero img,
   .story-hero img {
-    object-position: center 68%;
+    object-position: center 30%;
   }
 
   .contact-hero img {
@@ -1266,7 +1267,7 @@ footer p {
   }
 
   .faq-hero img {
-    object-position: center 70%;
+    object-position: center 34%;
   }
 
   .about-hero,
@@ -1280,7 +1281,7 @@ footer p {
   .story-hero .page-hero-content,
   .members-hero .page-hero-content,
   .faq-hero .page-hero-content {
-    min-height: 520px;
+    min-height: 540px;
   }
 
   .about-hero + .members-section {
