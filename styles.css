@@ -158,7 +158,7 @@ a {
 }
 
 .hero {
-  min-height: 112vh;
+  min-height: 118vh;
 }
 
 .page-hero {
@@ -177,7 +177,7 @@ a {
 
 .hero img {
   animation: heroZoom 1100ms ease-out both;
-  object-position: center 58%;
+  object-position: center 50%;
 }
 
 .join-hero img {
@@ -197,13 +197,17 @@ a {
 }
 
 .faq-hero img {
-  object-position: center 50%;
+  object-position: center 46%;
 }
 
 .story-hero,
 .members-hero,
 .faq-hero {
   min-height: 900px;
+}
+
+.story-hero {
+  min-height: 920px;
 }
 
 .about-hero,
@@ -937,7 +941,7 @@ footer p {
 }
 
 .story-hero img {
-  object-position: center 58%;
+  object-position: center 42%;
 }
 
 .about-story-section {
@@ -1228,7 +1232,7 @@ footer p {
   }
 
   .hero {
-    min-height: 720px;
+    min-height: 760px;
   }
 
   .page-hero {
@@ -1245,6 +1249,10 @@ footer p {
     width: 100%;
   }
 
+  .hero img {
+    object-position: center 50%;
+  }
+
   .page-hero img {
     object-position: center 24%;
   }
@@ -1257,9 +1265,12 @@ footer p {
     object-position: center 58%;
   }
 
-  .members-hero img,
-  .story-hero img {
+  .members-hero img {
     object-position: center 58%;
+  }
+
+  .story-hero img {
+    object-position: center 42%;
   }
 
   .contact-hero img {
@@ -1267,7 +1278,7 @@ footer p {
   }
 
   .faq-hero img {
-    object-position: center 50%;
+    object-position: center 46%;
   }
 
   .about-hero,
@@ -1282,6 +1293,11 @@ footer p {
   .members-hero .page-hero-content,
   .faq-hero .page-hero-content {
     min-height: 660px;
+  }
+
+  .story-hero,
+  .story-hero .page-hero-content {
+    min-height: 680px;
   }
 
   .about-hero + .members-section {
@@ -1532,7 +1548,7 @@ footer p {
   }
 
   .hero {
-    min-height: 680px;
+    min-height: 720px;
   }
 
   .hero-content {
