@@ -167,12 +167,12 @@ a {
 
 .hero img,
 .page-hero img {
-  height: 80%;
+  height: 50%;
   inset: 0;
   object-fit: cover;
   object-position: center top;
   position: absolute;
-  width: 100%;
+  width: 50%;
 }
 
 .hero img {
