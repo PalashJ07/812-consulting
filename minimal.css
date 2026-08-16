@@ -1743,3 +1743,14 @@ label,
     object-position: center 52%;
   }
 }
+
+
+/* Unified subject-centered image crops */
+.hero > img,
+.page-hero > img,
+.photo-frame > img,
+.impact-photo > img,
+.about-feature-photo > img,
+.member-card-front > img {
+  object-position: center center;
+}
