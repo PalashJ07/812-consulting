@@ -1437,3 +1437,15 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
   font-size: 17px;
   line-height: 1.65;
 }
+
+
+/* Project model node alignment */
+@media (min-width: 701px) {
+  .project-model-section .project-model::before {
+    top: 35px;
+  }
+}
+
+.project-model-section .model-stat strong {
+  font-size: 20px;
+}
