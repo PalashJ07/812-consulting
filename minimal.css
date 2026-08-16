@@ -1414,3 +1414,26 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
     margin-top: 44px;
   }
 }
+
+
+/* Project model heading contrast */
+.project-model-section .kicker {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+
+.project-model-section h2 {
+  color: #fff;
+  font-size: clamp(34px, 4vw, 52px);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+.project-model-section .section-copy,
+.project-model-section .section-copy p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 17px;
+  line-height: 1.65;
+}
