@@ -432,3 +432,43 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
     padding: 24px 0;
   }
 }
+
+
+/* Recruiting season navigation signal */
+.nav-links a.recruiting-live {
+  animation: recruitingPulse 2.8s ease-in-out infinite;
+  background: var(--m-crimson);
+  color: #fff;
+  padding: 11px 15px;
+}
+
+.nav-links a.recruiting-live:hover,
+.nav-links a.recruiting-live.active {
+  background: var(--m-crimson-hover);
+  color: #fff;
+}
+
+.nav-links a.recruiting-live::after {
+  display: none;
+}
+
+@keyframes recruitingPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(134, 28, 43, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(134, 28, 43, 0.13);
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-links a.recruiting-live {
+    padding: 8px 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links a.recruiting-live {
+    animation: none;
+  }
+}
