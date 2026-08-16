@@ -1612,3 +1612,54 @@ textarea {
     display: none;
   }
 }
+
+
+/* Avenir Light typography system */
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+.nav-links a,
+.button,
+.kicker,
+.mini-kicker,
+summary,
+label,
+.site-footer-column h2 {
+  font-weight: 600;
+}
+
+.hero h1,
+.page-hero h1,
+.contact-studio-story h1,
+.clients-hero-copy h1 {
+  font-weight: 400;
+}
+
