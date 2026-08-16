@@ -2222,3 +2222,266 @@ textarea { min-height: 148px; }
     padding-left: 14px;
   }
 }
+
+/* Shared mobile editorial system across every page */
+@media (max-width: 700px) {
+  .nav-wrap {
+    min-height: 64px;
+  }
+
+  .brand img {
+    width: auto;
+    max-width: 132px;
+    max-height: 34px;
+  }
+
+  .nav-toggle {
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+  }
+
+  .page-hero,
+  .members-hero,
+  .join-hero,
+  .story-hero,
+  .faq-hero {
+    position: relative;
+    height: clamp(350px, 96vw, 420px);
+    min-height: 0;
+    max-height: none;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .page-hero::after {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.08) 22%, rgba(10, 10, 10, 0.32) 58%, rgba(10, 10, 10, 0.78) 100%);
+    content: "";
+  }
+
+  .page-hero > img,
+  .members-hero > img,
+  .join-hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .page-hero-content,
+  .members-hero .page-hero-content,
+  .join-hero .page-hero-content,
+  .story-hero .page-hero-content,
+  .faq-hero .page-hero-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: min(100% - 40px, 620px);
+    height: 100%;
+    min-height: 0;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 26px 0;
+    text-align: center;
+  }
+
+  .page-hero-copy {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .page-hero .kicker {
+    margin-bottom: 8px;
+  }
+
+  .page-hero h1,
+  .members-hero h1 {
+    margin: 0;
+    font-size: clamp(2.45rem, 11vw, 3.35rem);
+    line-height: 0.98;
+    text-wrap: balance;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  .join-hero h1 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .page-hero .lead {
+    display: none;
+  }
+
+  .about-story-section,
+  .about-impact-section,
+  .about-feature-section,
+  .members-section,
+  .clients-engagements,
+  .clients-inquiry-section,
+  .recruitment-guide-section,
+  .past-clients-section,
+  .project-model-section,
+  .contact-page-intro {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .section-grid,
+  .about-story-grid,
+  .impact-layout,
+  .about-feature-grid,
+  .clients-hero-grid,
+  .clients-engagements-layout,
+  .contact-studio-grid {
+    gap: 30px;
+  }
+
+  .section-grid > :first-child,
+  .about-story-grid > :first-child,
+  .faq-page-heading,
+  .members-intro > :first-child {
+    max-width: 420px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .section-grid > :first-child h2,
+  .about-story-grid > :first-child h2,
+  .faq-page-heading h2 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    text-wrap: balance;
+  }
+
+  .impact-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .impact-card {
+    padding: 32px 20px;
+  }
+
+  .impact-card > .kicker {
+    text-align: center;
+  }
+
+  .impact-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .impact-stats > div {
+    min-height: 118px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .impact-photo {
+    min-height: 300px;
+  }
+
+  .service-grid,
+  .card-grid,
+  .about-pillars {
+    gap: 0;
+    border-top: 1px solid var(--m-line);
+  }
+
+  :where(.service-card, .info-card, .about-pillar) {
+    padding: 26px 0;
+    border: 0;
+    border-bottom: 1px solid var(--m-line);
+    background: transparent;
+  }
+
+  .client-logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+  }
+
+  .client-logo-card {
+    min-height: 82px;
+    padding: 14px;
+  }
+
+  .clients-hero {
+    padding: 52px 0;
+  }
+
+  .clients-hero-copy {
+    text-align: center;
+  }
+
+  .clients-hero-copy h1 {
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+    line-height: 0.98;
+    text-wrap: balance;
+  }
+
+  .clients-hero-actions,
+  .join-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .clients-hero-actions .button,
+  .join-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .clients-hero-proof {
+    padding: 26px 0 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+  }
+
+  .engagement-card,
+  .join-panel,
+  .contact-studio-card {
+    padding: 28px 20px;
+  }
+
+  .contact-page-intro {
+    padding-top: 44px;
+  }
+
+  .contact-studio-story {
+    text-align: center;
+  }
+
+  .contact-studio-story h1 {
+    font-size: clamp(2.55rem, 11vw, 3.45rem);
+    line-height: 0.98;
+    text-wrap: balance;
+  }
+
+  .contact-studio-paths {
+    justify-content: center;
+  }
+
+  .faq-page-layout,
+  .faq-category,
+  .recruitment-detail-grid {
+    gap: 26px;
+  }
+
+  .faq-category-heading {
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--m-crimson);
+  }
+
+  .faq-category-questions details {
+    margin: 0;
+  }
+
+  .site-footer {
+    padding-top: 48px;
+  }
+}
