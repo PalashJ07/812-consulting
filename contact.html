@@ -26,110 +26,54 @@
         </nav>
       </div>
     </header>
-    <main>
-      <section class="page-hero contact-hero">
-        <img src="assets/conversation-wide.jpg" alt="812 Consulting members in conversation" />
-        <div class="container page-hero-content">
-          <div class="page-hero-copy">
-            <p class="kicker">Contact</p>
-            <h1>Get In Touch</h1>
-            <p class="lead">Questions about membership, projects, or 812 Consulting? Reach out anytime.</p>
+    <main class="contact-page-main">
+      <section class="contact-page-intro" aria-labelledby="contact-page-title">
+        <div class="container contact-page-intro-grid">
+          <div class="contact-page-heading">
+            <span class="contact-mark" aria-hidden="true"><i></i><i></i></span>
+            <h1 id="contact-page-title">Contact Us</h1>
           </div>
+          <p>Ready to see what’s next? Share your details below and we’ll connect you with the right member of the 812 team.</p>
         </div>
       </section>
 
-      <section>
-        <div class="container section-grid">
-          <div>
-            <p class="kicker">Contact Information</p>
-            <h2>Bloomington, Indiana.</h2>
-            <div class="section-copy">
-              <p>
-                Whether you are a student interested in joining, an organization curious about working with us, or an IU
-                community member who wants to learn more, we would be glad to hear from you.
-              </p>
-            </div>
-          </div>
-          <div class="contact-card">
-            <h3>812 Consulting</h3>
-            <p>Bloomington, IN<br />United States</p>
-            <p>Email: <a href="mailto:812consultingiub@gmail.com">812consultingiub@gmail.com</a></p>
-            <p>
-              <a href="https://www.instagram.com/812consulting" target="_blank" rel="noopener">Instagram</a>
-              ·
-              <a href="https://www.linkedin.com/company/812-consulting/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="soft-section">
-        <div class="container">
-          <p class="kicker">Who Should Reach Out?</p>
-          <h2>We work with students, clients, and the IU community.</h2>
-          <div class="card-grid">
-            <article class="info-card">
-              <h3>Prospective Members</h3>
-              <p>Ask about applications, recruiting timelines, coffee chats, and what membership looks like.</p>
-            </article>
-            <article class="info-card">
-              <h3>Potential Clients</h3>
-              <p>Share a business question or project idea that could benefit from student research and analysis.</p>
-            </article>
-            <article class="info-card">
-              <h3>Campus Partners</h3>
-              <p>Connect with us about events, collaboration, professional development, or student opportunities.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="contact-form-cta">
-        <div class="container">
-          <p class="kicker">Ready To Connect?</p>
-          <h2>Tell us how we can help.</h2>
-          <a class="button dark-secondary" href="#contact-form">Contact Us</a>
-        </div>
-      </section>
-
-      <section class="contact-form-section" id="contact-form" aria-labelledby="contact-form-title">
-        <div class="container contact-form-shell">
-          <div class="contact-form-intro">
-            <p class="kicker">Get In Touch</p>
-            <h2 id="contact-form-title">Contact Us</h2>
-            <p>Send us a project or application question and the right member of our team will follow up.</p>
-          </div>
-          <form class="contact-form" action="https://formsubmit.co/812consultingiub@gmail.com" method="POST">
+      <section class="contact-page-form-section" aria-labelledby="contact-form-title">
+        <div class="container contact-page-form-wrap">
+          <h2 id="contact-form-title">Contact Us</h2>
+          <form class="contact-page-form" action="https://formsubmit.co/812consultingiub@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New inquiry from the 812 Consulting website" />
             <input type="hidden" name="_captcha" value="false" />
             <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
-            <div class="form-row">
-              <div class="form-field">
+            <div class="contact-page-form-grid">
+              <div class="contact-line-field">
                 <label for="first-name">First Name</label>
                 <input id="first-name" name="First Name" type="text" autocomplete="given-name" required />
               </div>
-              <div class="form-field">
+              <div class="contact-line-field">
                 <label for="last-name">Last Name</label>
                 <input id="last-name" name="Last Name" type="text" autocomplete="family-name" required />
               </div>
+              <div class="contact-line-field">
+                <label for="email">Email Address<span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="contact-line-field">
+                <label for="subject">Subject</label>
+                <select id="subject" name="Contact Intent" required>
+                  <option value="" selected disabled>Select a subject</option>
+                  <option value="Project Question">Project Question</option>
+                  <option value="Application Question">Application Question</option>
+                  <option value="General Question">General Question</option>
+                </select>
+              </div>
+              <div class="contact-line-field contact-message-field">
+                <label for="message">Message<span aria-hidden="true">*</span></label>
+                <textarea id="message" name="Message" rows="5" required></textarea>
+              </div>
             </div>
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
+            <div class="contact-page-submit-row">
+              <button class="contact-page-submit" type="submit">Submit</button>
             </div>
-            <div class="form-field">
-              <label for="contact-intent">Reason For Contacting</label>
-              <select id="contact-intent" name="Contact Intent" required>
-                <option value="" selected disabled>Select one</option>
-                <option value="Project Question">Project Question</option>
-                <option value="Application Question">Application Question</option>
-                <option value="General Question">General Question</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="message">Message</label>
-              <textarea id="message" name="Message" rows="6" required></textarea>
-            </div>
-            <button class="button contact-submit" type="submit">Send Message</button>
           </form>
         </div>
       </section>
