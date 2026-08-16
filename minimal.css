@@ -1476,3 +1476,14 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
     z-index: 1;
   }
 }
+
+
+/* Avenir typography */
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
