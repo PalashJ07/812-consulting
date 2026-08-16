@@ -472,3 +472,138 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
     animation: none;
   }
 }
+
+
+/* Recruitment process */
+.recruitment-process-section {
+  background: #fff;
+}
+
+.recruitment-process-intro {
+  align-items: end;
+  display: grid;
+  gap: clamp(44px, 7vw, 96px);
+  grid-template-columns: minmax(380px, 1.2fr) minmax(280px, 0.8fr);
+  margin-bottom: 54px;
+}
+
+.recruitment-process-intro h2 {
+  margin-bottom: 0;
+  max-width: 760px;
+}
+
+.recruitment-process-intro > p {
+  color: var(--m-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.recruitment-phases {
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.recruitment-phase {
+  border-top: 1px solid var(--m-line);
+  display: grid;
+  gap: clamp(28px, 5vw, 70px);
+  grid-template-columns: 70px minmax(0, 1fr);
+  padding: 36px 0;
+}
+
+.recruitment-phase:last-child {
+  border-bottom: 1px solid var(--m-line);
+}
+
+.recruitment-phase-number {
+  color: var(--m-crimson);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding-top: 5px;
+}
+
+.recruitment-phase-content {
+  max-width: 900px;
+}
+
+.recruitment-phase-content .mini-kicker {
+  margin-bottom: 7px;
+}
+
+.recruitment-phase-content h3 {
+  font-size: clamp(24px, 2.7vw, 34px);
+  margin-bottom: 12px;
+}
+
+.recruitment-phase-content > p:not(.mini-kicker) {
+  color: var(--m-muted);
+  margin-bottom: 18px;
+  max-width: 780px;
+}
+
+.recruitment-phase-flow {
+  align-items: baseline;
+  background: var(--m-soft);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 18px;
+  margin-top: 18px;
+  padding: 14px 17px;
+}
+
+.recruitment-phase-flow span {
+  color: var(--m-crimson);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.recruitment-phase-flow strong {
+  color: var(--m-ink);
+  font-size: 13px;
+}
+
+.recruitment-signals {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.recruitment-signals li {
+  border-left: 2px solid var(--m-crimson);
+  color: var(--m-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  padding-left: 12px;
+}
+
+@media (max-width: 920px) {
+  .recruitment-process-intro {
+    gap: 24px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .recruitment-process-intro {
+    margin-bottom: 36px;
+  }
+
+  .recruitment-phase {
+    gap: 10px;
+    grid-template-columns: 1fr;
+    padding: 30px 0;
+  }
+
+  .recruitment-signals {
+    grid-template-columns: 1fr;
+  }
+}
