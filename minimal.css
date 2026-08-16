@@ -1758,6 +1758,7 @@ label,
 
 /* Hero focal alignment */
 .hero > img,
-.members-hero > img {
+.members-hero > img,
+.join-hero > img {
   object-position: center center;
 }
