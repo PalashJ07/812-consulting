@@ -1762,3 +1762,25 @@ label,
 .join-hero > img {
   object-position: center center;
 }
+
+
+/* Members hero proportion refinement */
+.members-hero,
+.members-hero .page-hero-content {
+  min-height: 500px;
+}
+
+.members-hero h1 {
+  font-size: clamp(48px, 6vw, 76px);
+}
+
+@media (max-width: 700px) {
+  .members-hero,
+  .members-hero .page-hero-content {
+    min-height: 460px;
+  }
+
+  .members-hero h1 {
+    font-size: clamp(44px, 13vw, 62px);
+  }
+}
