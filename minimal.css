@@ -1105,3 +1105,9 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
     min-height: 0;
   }
 }
+
+
+/* Regular-weight FAQ questions */
+.faq-page-layout .faq-category-questions summary {
+  font-weight: 400;
+}
