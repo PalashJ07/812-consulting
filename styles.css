@@ -835,6 +835,15 @@ footer p {
   margin: 16px 0 0;
 }
 
+.footer-copyright {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  margin: 32px 0 0;
+  padding-top: 22px;
+  text-align: center;
+}
+
 .footer-contact {
   text-align: right;
 }
