@@ -1449,3 +1449,30 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
 .project-model-section .model-stat strong {
   font-size: 20px;
 }
+
+
+/* Node-anchored project connectors */
+@media (min-width: 701px) {
+  .project-model-section .project-model::before {
+    display: none;
+  }
+
+  .project-model-section .model-stat::after {
+    background: rgba(255, 255, 255, 0.2);
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    top: -27px;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .project-model-section .model-stat:last-child::after {
+    display: none;
+  }
+
+  .project-model-section .model-stat::before {
+    z-index: 1;
+  }
+}
