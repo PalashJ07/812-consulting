@@ -1487,3 +1487,128 @@ select,
 textarea {
   font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+
+/* Infinite industry marquee */
+.industry-marquee-section {
+  background: #fff;
+  border-bottom: 1px solid var(--m-line);
+  border-top: 1px solid var(--m-line);
+  overflow: hidden;
+  padding: 62px 0 54px;
+}
+
+.industry-marquee-heading {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.industry-marquee-heading .kicker,
+.industry-marquee-heading h2 {
+  margin-bottom: 0;
+}
+
+.industry-marquee-heading h2 {
+  font-size: clamp(28px, 3.2vw, 42px);
+}
+
+.industry-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.industry-marquee::before,
+.industry-marquee::after {
+  content: "";
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: clamp(30px, 7vw, 110px);
+  z-index: 2;
+}
+
+.industry-marquee::before {
+  background: linear-gradient(90deg, #fff, rgba(255,255,255,0));
+  left: 0;
+}
+
+.industry-marquee::after {
+  background: linear-gradient(270deg, #fff, rgba(255,255,255,0));
+  right: 0;
+}
+
+.industry-marquee-track {
+  animation: industryMarquee 34s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.industry-marquee:hover .industry-marquee-track {
+  animation-play-state: paused;
+}
+
+.industry-marquee-group {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  gap: 26px;
+  padding-right: 26px;
+}
+
+.industry-marquee-group span {
+  color: var(--m-ink);
+  font-size: clamp(17px, 2vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  white-space: nowrap;
+}
+
+.industry-marquee-group i {
+  background: var(--m-crimson);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(134, 28, 43, 0.1);
+  display: block;
+  flex: 0 0 auto;
+  height: 7px;
+  width: 7px;
+}
+
+@keyframes industryMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 700px) {
+  .industry-marquee-section {
+    padding: 48px 0 42px;
+  }
+
+  .industry-marquee-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .industry-marquee-track {
+    animation-duration: 26s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .industry-marquee {
+    overflow-x: auto;
+  }
+
+  .industry-marquee-track {
+    animation: none;
+  }
+
+  .industry-marquee-group[aria-hidden="true"] {
+    display: none;
+  }
+}
