@@ -2017,8 +2017,43 @@ textarea { min-height: 148px; }
   body { font-size: 16px; }
   section, .section, .content-section { scroll-margin-top: 78px; }
 
-  .hero, .home-hero {
+  .page-hero {
     min-height: min(690px, calc(100svh - 72px));
+  }
+
+  body > main > .hero:first-child {
+    display: grid;
+    height: auto;
+    min-height: 0;
+    background: #171717;
+  }
+
+  body > main > .hero:first-child::after {
+    display: none;
+  }
+
+  body > main > .hero:first-child > img {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center 46%;
+  }
+
+  body > main > .hero:first-child .hero-content {
+    position: relative;
+    width: min(100% - 40px, 620px);
+    min-height: 0;
+    align-items: flex-start;
+    padding: 36px 0 46px;
+    text-align: left;
+  }
+
+  body > main > .hero:first-child .hero-copy {
+    width: 100%;
+    max-width: none;
   }
 
   .page-hero, .members-hero, .join-hero {
