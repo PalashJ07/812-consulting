@@ -212,3 +212,58 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
   .clients-engagements { padding: 72px 0; }
   .engagement-card-header { padding: 28px 22px; }
 }
+
+
+/* Proportion and header consistency fixes */
+@media (min-width: 921px) {
+  body > .site-header .nav-wrap {
+    height: 76px;
+    max-height: 76px;
+    min-height: 76px;
+  }
+
+  body > .site-header .brand,
+  body > .site-header .brand img {
+    flex: 0 0 auto;
+    height: 32px;
+    max-height: 32px;
+    width: auto;
+  }
+
+  body > .site-header .nav-links,
+  body > .site-header .nav-links a {
+    line-height: 1;
+  }
+}
+
+.about-impact-section .impact-layout {
+  align-items: stretch;
+}
+
+.about-impact-section .impact-card {
+  align-content: center;
+  display: grid;
+  height: 100%;
+}
+
+.about-impact-section .impact-photo {
+  height: auto;
+  min-height: 0;
+}
+
+.about-impact-section .impact-photo img {
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .about-impact-section .impact-card {
+    height: auto;
+  }
+
+  .about-impact-section .impact-photo,
+  .about-impact-section .impact-photo img {
+    height: 320px;
+  }
+}
