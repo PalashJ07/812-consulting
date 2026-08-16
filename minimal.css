@@ -1756,11 +1756,8 @@ label,
 }
 
 
-/* Page-specific hero focal alignment */
-.hero > img {
-  object-position: left center;
-}
-
+/* Hero focal alignment */
+.hero > img,
 .members-hero > img {
-  object-position: right center;
+  object-position: center center;
 }
