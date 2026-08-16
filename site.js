@@ -10,6 +10,51 @@ function updateHeaderState() {
 updateHeaderState();
 window.addEventListener("scroll", updateHeaderState, { passive: true });
 
+const nav = header?.querySelector(".nav-links");
+const navWrap = header?.querySelector(".nav-wrap");
+
+if (header && nav && navWrap) {
+  nav.id = nav.id || "primary-navigation";
+
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "nav-toggle";
+  toggle.setAttribute("aria-controls", nav.id);
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", "Open navigation");
+  toggle.innerHTML = `
+    <span class="nav-toggle-line" aria-hidden="true"></span>
+    <span class="nav-toggle-line" aria-hidden="true"></span>
+    <span class="nav-toggle-line" aria-hidden="true"></span>
+  `;
+  navWrap.insertBefore(toggle, nav);
+
+  const setMenuState = (open) => {
+    header.classList.toggle("menu-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+  };
+
+  toggle.addEventListener("click", () => {
+    setMenuState(!header.classList.contains("menu-open"));
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && header.classList.contains("menu-open")) {
+      setMenuState(false);
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 920) setMenuState(false);
+  });
+}
+
 const revealTargets = document.querySelectorAll(
   "main section:not(.hero):not(.page-hero):not(.members-section):not(.contact-page-intro):not(.contact-page-form-section), .service-card, .info-card, .timeline-card, .post-card, .model-stat, .about-stat, details, .photo-frame, .join-panel, .contact-card, .quote-panel"
 );
