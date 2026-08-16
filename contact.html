@@ -26,55 +26,66 @@
         </nav>
       </div>
     </header>
-    <main class="contact-page-main">
-      <section class="contact-page-intro" aria-labelledby="contact-page-title">
-        <div class="container contact-page-intro-grid">
-          <div class="contact-page-heading">
-            <span class="contact-mark" aria-hidden="true"><i></i><i></i></span>
-            <h1 id="contact-page-title">Contact Us</h1>
+    <main class="contact-page-main contact-studio-main">
+      <section class="contact-page-intro contact-studio" aria-labelledby="contact-page-title">
+        <div class="container contact-studio-grid">
+          <div class="contact-studio-story">
+            <div class="contact-studio-code" aria-label="812 Consulting">812 <span>/</span> CONNECT</div>
+            <p class="kicker">Indiana University Bloomington</p>
+            <h1 id="contact-page-title">Let’s build something worthwhile.</h1>
+            <p class="contact-studio-lead">
+              Bring us a business challenge, a question about joining, or the beginning of an idea. We’ll connect you
+              with the right person at 812.
+            </p>
+            <div class="contact-studio-paths" aria-label="Inquiry types">
+              <span>Client Projects</span>
+              <span>Student Applications</span>
+              <span>General Questions</span>
+            </div>
           </div>
-          <p>Ready to see what’s next? Share your details below and we’ll connect you with the right member of the 812 team.</p>
-        </div>
-      </section>
 
-      <section class="contact-page-form-section" aria-labelledby="contact-form-title">
-        <div class="container contact-page-form-wrap">
-          <h2 id="contact-form-title">Contact Us</h2>
-          <form class="contact-page-form" action="https://formsubmit.co/812consultingiub@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New inquiry from the 812 Consulting website" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
-            <div class="contact-page-form-grid">
-              <div class="contact-line-field">
-                <label for="first-name">First Name</label>
-                <input id="first-name" name="First Name" type="text" autocomplete="given-name" required />
+          <div class="contact-studio-card">
+            <div class="contact-studio-card-heading">
+              <span>Start here</span>
+              <h2>Start a conversation</h2>
+              <p>Tell us a little about yourself and what you have in mind.</p>
+            </div>
+            <form class="contact-studio-form" action="https://formsubmit.co/812consultingiub@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="New inquiry from the 812 Consulting website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <div class="contact-studio-form-row">
+                <div class="contact-studio-field">
+                  <label for="first-name">First name</label>
+                  <input id="first-name" name="First Name" type="text" autocomplete="given-name" required />
+                </div>
+                <div class="contact-studio-field">
+                  <label for="last-name">Last name</label>
+                  <input id="last-name" name="Last Name" type="text" autocomplete="family-name" required />
+                </div>
               </div>
-              <div class="contact-line-field">
-                <label for="last-name">Last Name</label>
-                <input id="last-name" name="Last Name" type="text" autocomplete="family-name" required />
-              </div>
-              <div class="contact-line-field">
-                <label for="email">Email Address<span aria-hidden="true">*</span></label>
+              <div class="contact-studio-field">
+                <label for="email">Email address</label>
                 <input id="email" name="email" type="email" autocomplete="email" required />
               </div>
-              <div class="contact-line-field">
-                <label for="subject">Subject</label>
+              <div class="contact-studio-field">
+                <label for="subject">What can we help with?</label>
                 <select id="subject" name="Contact Intent" required>
-                  <option value="" selected disabled>Select a subject</option>
+                  <option value="" selected disabled>Choose an inquiry type</option>
                   <option value="Project Question">Project Question</option>
                   <option value="Application Question">Application Question</option>
                   <option value="General Question">General Question</option>
                 </select>
               </div>
-              <div class="contact-line-field contact-message-field">
-                <label for="message">Message<span aria-hidden="true">*</span></label>
+              <div class="contact-studio-field">
+                <label for="message">Your message</label>
                 <textarea id="message" name="Message" rows="5" required></textarea>
               </div>
-            </div>
-            <div class="contact-page-submit-row">
-              <button class="contact-page-submit" type="submit">Submit</button>
-            </div>
-          </form>
+              <button class="contact-studio-submit" type="submit">
+                <span>Send inquiry</span><span aria-hidden="true">↗</span>
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
