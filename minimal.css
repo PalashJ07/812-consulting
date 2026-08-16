@@ -1111,3 +1111,86 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
 .faq-page-layout .faq-category-questions summary {
   font-weight: 400;
 }
+
+
+/* Compact About impact composition */
+.about-impact-section {
+  padding: 72px 0;
+}
+
+.about-impact-section .impact-layout {
+  grid-template-columns: minmax(340px, 0.92fr) minmax(380px, 1.08fr);
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.about-impact-section .impact-card,
+.about-impact-section .impact-photo {
+  height: 420px;
+}
+
+.about-impact-section .impact-card {
+  align-content: center;
+  padding: 34px 38px;
+}
+
+.about-impact-section .impact-stats {
+  gap: 20px 24px;
+  margin-top: 22px;
+}
+
+.about-impact-section .impact-stats strong {
+  font-size: clamp(36px, 4vw, 50px);
+}
+
+.about-impact-section .impact-stats span {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.about-impact-section .impact-photo {
+  overflow: hidden;
+}
+
+.about-impact-section .impact-photo img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center 44%;
+  width: 100%;
+}
+
+@media (max-width: 920px) {
+  .about-impact-section .impact-layout {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+
+  .about-impact-section .impact-card {
+    height: auto;
+    min-height: 340px;
+  }
+
+  .about-impact-section .impact-photo {
+    height: 380px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-impact-section {
+    padding: 58px 0;
+  }
+
+  .about-impact-section .impact-card {
+    min-height: 0;
+    padding: 30px 24px;
+  }
+
+  .about-impact-section .impact-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-impact-section .impact-photo,
+  .about-impact-section .impact-photo img {
+    height: 290px;
+  }
+}
