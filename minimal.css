@@ -1754,3 +1754,13 @@ label,
 .member-card-front > img {
   object-position: center center;
 }
+
+
+/* Page-specific hero focal alignment */
+.hero > img {
+  object-position: left center;
+}
+
+.members-hero > img {
+  object-position: right center;
+}
