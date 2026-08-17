@@ -2991,6 +2991,30 @@ main > section.recruitment-guide-section {
   transform: none;
 }
 
+.member-directory-list a {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.member-directory-list a::after {
+  margin-left: 7px;
+  color: var(--m-crimson);
+  content: "↗";
+  font-size: 0.72em;
+  opacity: 0;
+  transform: translate(-3px, 2px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.member-directory-list a:hover::after,
+.member-directory-list a:focus-visible::after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 @media (max-width: 700px) {
   .member-directory-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
