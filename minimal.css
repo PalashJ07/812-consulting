@@ -2977,8 +2977,6 @@ main > section.recruitment-guide-section {
   columns: unset;
   column-gap: 0;
   column-rule: 0;
-  border-top: 1px solid var(--m-line);
-  border-left: 1px solid var(--m-line);
 }
 
 .member-directory-list li {
@@ -2986,12 +2984,10 @@ main > section.recruitment-guide-section {
   align-items: center;
   min-width: 0;
   padding: 14px clamp(16px, 2vw, 24px);
-  border-right: 1px solid var(--m-line);
-  border-bottom: 1px solid var(--m-line);
 }
 
 .member-directory-list li:hover {
-  background: rgba(134, 28, 43, 0.055);
+  background: transparent;
   transform: none;
 }
 
