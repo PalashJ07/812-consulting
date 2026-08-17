@@ -2485,3 +2485,217 @@ textarea { min-height: 148px; }
     padding-top: 48px;
   }
 }
+
+/* 812 color system: IU limestone, crimson, paper, and charcoal */
+:root {
+  --m-paper: #fbfaf7;
+  --m-soft: #eee8e1;
+  --m-limestone: #e6ddd3;
+  --m-blush: #f3e6e5;
+  --m-crimson-deep: #681421;
+}
+
+html,
+body {
+  background: var(--m-paper);
+}
+
+main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section),
+.clients-hero,
+.contact-studio-main {
+  background-color: var(--m-paper);
+}
+
+main > section.soft-section,
+main > section.about-impact-section,
+main > section.past-clients-section,
+main > section.clients-inquiry-section,
+main > section.contact-studio,
+.contact-studio-main {
+  background-color: var(--m-soft) !important;
+}
+
+body > main > .hero + section,
+main > section.about-story-section,
+main > section.clients-engagements,
+main > section.recruitment-guide-section {
+  background-color: #f7f2ec !important;
+}
+
+.home-proof-section {
+  background: var(--m-crimson-deep);
+  border-color: transparent;
+  color: #fff;
+}
+
+.home-proof-heading .kicker {
+  color: #eec8ce;
+}
+
+.home-proof-heading h2,
+.home-proof-metrics strong {
+  color: #fff;
+}
+
+.home-proof-metrics {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.home-proof-metrics > div {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.home-proof-metrics span {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.service-card,
+.info-card,
+.about-pillar {
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.service-card:nth-child(even),
+.info-card:nth-child(even),
+.about-pillar:nth-child(even) {
+  background: rgba(134, 28, 43, 0.055);
+}
+
+.about-feature-section {
+  background: var(--m-crimson-deep) !important;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.about-feature-section :where(h2, h3) {
+  color: #fff;
+}
+
+.about-feature-section .about-feature-copy p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.about-feature-section .kicker {
+  color: #eec8ce;
+}
+
+.about-feature-copy {
+  background: transparent;
+}
+
+.about-impact-section .impact-card {
+  background: var(--m-blush);
+}
+
+.members-section {
+  background: #f7f2ec !important;
+}
+
+.member-role-group > h3 {
+  color: var(--m-crimson);
+}
+
+.join-panel {
+  background: var(--m-crimson-deep);
+  border-color: var(--m-crimson-deep);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.join-panel :where(h2, h3) {
+  color: #fff;
+}
+
+.join-panel > p:not(.kicker) {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.join-panel .kicker {
+  color: #eec8ce;
+}
+
+.join-panel .button {
+  background: #fff;
+  border-color: #fff;
+  color: var(--m-crimson-deep);
+}
+
+.join-panel .button.secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.62);
+  color: #fff;
+}
+
+.faq-category:nth-child(even) {
+  background: var(--m-blush);
+}
+
+.faq-category:nth-child(even) .faq-category-heading,
+.faq-category:nth-child(even) .faq-category-questions {
+  padding-right: clamp(20px, 3vw, 34px);
+  padding-left: clamp(20px, 3vw, 34px);
+}
+
+.clients-hero {
+  background: var(--m-limestone);
+}
+
+.clients-hero-proof {
+  background: var(--m-crimson-deep);
+  border-color: var(--m-crimson-deep);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.clients-hero .clients-hero-proof p,
+.clients-hero .clients-hero-proof strong,
+.clients-proof-eyebrow {
+  color: #fff;
+}
+
+.clients-proof-line {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.clients-proof-line span {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.contact-studio-code {
+  background: var(--m-crimson-deep);
+  color: #fff;
+  display: inline-flex;
+  padding: 8px 12px;
+}
+
+.contact-studio-card,
+.clients-inquiry-form,
+.engagement-card {
+  background: #fff;
+  border-color: #d7ccc1;
+}
+
+@media (max-width: 700px) {
+  .home-proof-section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .home-proof-metrics > div:nth-child(-n + 2),
+  .home-proof-metrics > div {
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+
+  .faq-category:nth-child(even) {
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 28px 20px;
+  }
+
+  .faq-category:nth-child(even) .faq-category-heading,
+  .faq-category:nth-child(even) .faq-category-questions {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .clients-hero-proof {
+    padding: 28px 20px;
+  }
+}
