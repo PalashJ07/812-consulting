@@ -115,6 +115,13 @@ section { padding: 96px 0; }
 /* Services */
 .client-logo-grid { gap: 1px; background: var(--m-line); }
 .client-logo-card { background: #fff; border: 0; box-shadow: none; height: 140px; }
+.client-logo-card img {
+  width: min(100%, 190px);
+  height: 74px;
+  max-height: none;
+  object-fit: contain;
+}
+.client-logo-card:last-child:nth-child(3n + 1) { grid-column: 2; }
 .client-logo-card:hover { border: 0; box-shadow: none; transform: none; }
 .past-clients-section { background: var(--m-soft); }
 
@@ -2407,6 +2414,11 @@ textarea { min-height: 148px; }
   .client-logo-card {
     min-height: 82px;
     padding: 14px;
+  }
+
+  .client-logo-card img {
+    width: min(100%, 118px);
+    height: 52px;
   }
 
   .clients-hero {
