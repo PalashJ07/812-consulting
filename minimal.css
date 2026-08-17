@@ -41,7 +41,7 @@ section { padding: 96px 0; }
 }
 .site-header.is-scrolled { background: rgba(255,255,255,.98); box-shadow: none; }
 .nav-wrap { min-height: 76px; }
-.brand img { height: 32px; }
+.brand img { height: 40px; }
 .nav-links { gap: clamp(16px,2vw,29px); }
 .nav-links a {
   color: #4f4b48;
@@ -2231,8 +2231,8 @@ textarea { min-height: 148px; }
 
   .brand img {
     width: auto;
-    max-width: 132px;
-    max-height: 34px;
+    max-width: 160px;
+    max-height: 40px;
   }
 
   .nav-toggle {
