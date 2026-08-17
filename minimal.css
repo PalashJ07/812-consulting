@@ -2944,15 +2944,15 @@ main > section.recruitment-guide-section {
 @media (min-width: 921px) {
   body > .site-header .brand,
   body > .site-header .brand img {
-    height: 46px;
-    max-height: 46px;
+    height: 54px;
+    max-height: 54px;
   }
 }
 
 @media (max-width: 920px) {
   body > .site-header .brand img {
-    height: 40px;
-    max-height: 40px;
+    height: 44px;
+    max-height: 44px;
     max-width: 190px;
   }
 }
