@@ -29,6 +29,93 @@ if (header && nav && navWrap) {
   `;
   navWrap.insertBefore(toggle, nav);
 
+  const dropdownMenus = {
+    "about.html": [
+      ["Our Story", "about.html#our-story"],
+      ["Our Mission", "about.html#mission"],
+      ["What Sets Us Apart", "about.html#pillars"],
+      ["Student Experience", "about.html#student-experience"]
+    ],
+    "services.html": [
+      ["Capabilities", "services.html#capabilities"],
+      ["Project Model", "services.html#project-model"],
+      ["Past Clients", "services.html#clients"],
+      ["Our Commitment", "services.html#commitment"]
+    ],
+    "members.html": [
+      ["Executive Board", "members.html#executive-board"],
+      ["Full Roster", "members.html#member-directory-title"]
+    ],
+    "clients.html": [
+      ["Why Partner With Us", "clients.html#partner-overview"],
+      ["Engagement Example", "clients.html#case-study"],
+      ["Project Inquiry", "clients.html#project-inquiry"]
+    ],
+    "join.html": [
+      ["Membership", "join.html#membership"],
+      ["What We Look For", "join.html#what-we-look-for"],
+      ["Recruitment Process", "join.html#recruitment-process"]
+    ],
+    "faq.html": [
+      ["General", "faq.html#faq-general"],
+      ["Recruitment", "faq.html#faq-recruitment"],
+      ["Membership", "faq.html#faq-membership"]
+    ]
+  };
+
+  const closeSubmenus = (exception = null) => {
+    nav.querySelectorAll(".nav-item.submenu-open").forEach((item) => {
+      if (item === exception) return;
+      item.classList.remove("submenu-open");
+      const button = item.querySelector(".nav-submenu-toggle");
+      button?.setAttribute("aria-expanded", "false");
+    });
+  };
+
+  [...nav.children].forEach((link, index) => {
+    if (!(link instanceof HTMLAnchorElement)) return;
+    const page = link.getAttribute("href")?.split("#")[0];
+    const entries = dropdownMenus[page];
+    if (!entries) return;
+
+    const item = document.createElement("div");
+    item.className = "nav-item nav-item-has-menu";
+    link.before(item);
+    item.appendChild(link);
+
+    const menuId = `nav-submenu-${index}`;
+    const menu = document.createElement("div");
+    menu.className = "nav-submenu";
+    menu.id = menuId;
+
+    entries.forEach(([label, href]) => {
+      const sublink = document.createElement("a");
+      sublink.href = href;
+      sublink.textContent = label;
+      menu.appendChild(sublink);
+    });
+
+    const submenuToggle = document.createElement("button");
+    submenuToggle.type = "button";
+    submenuToggle.className = "nav-submenu-toggle";
+    submenuToggle.setAttribute("aria-controls", menuId);
+    submenuToggle.setAttribute("aria-expanded", "false");
+    submenuToggle.setAttribute("aria-haspopup", "true");
+    submenuToggle.setAttribute("aria-label", `Open ${link.textContent.trim()} menu`);
+    submenuToggle.innerHTML = '<span aria-hidden="true"></span>';
+
+    submenuToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const willOpen = !item.classList.contains("submenu-open");
+      closeSubmenus(item);
+      item.classList.toggle("submenu-open", willOpen);
+      submenuToggle.setAttribute("aria-expanded", String(willOpen));
+      submenuToggle.setAttribute("aria-label", `${willOpen ? "Close" : "Open"} ${link.textContent.trim()} menu`);
+    });
+
+    item.append(submenuToggle, menu);
+  });
+
   const setMenuState = (open) => {
     header.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
@@ -36,6 +123,7 @@ if (header && nav && navWrap) {
   };
 
   toggle.addEventListener("click", () => {
+    closeSubmenus();
     setMenuState(!header.classList.contains("menu-open"));
   });
 
@@ -44,13 +132,25 @@ if (header && nav && navWrap) {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && header.classList.contains("menu-open")) {
-      setMenuState(false);
-      toggle.focus();
+    if (event.key === "Escape") {
+      const openSubmenu = nav.querySelector(".nav-item.submenu-open");
+      if (openSubmenu) {
+        const submenuToggle = openSubmenu.querySelector(".nav-submenu-toggle");
+        closeSubmenus();
+        submenuToggle?.focus();
+      } else if (header.classList.contains("menu-open")) {
+        setMenuState(false);
+        toggle.focus();
+      }
     }
   });
 
+  document.addEventListener("click", (event) => {
+    if (!nav.contains(event.target)) closeSubmenus();
+  });
+
   window.addEventListener("resize", () => {
+    closeSubmenus();
     if (window.innerWidth > 920) setMenuState(false);
   });
 }
