@@ -55,6 +55,27 @@ if (header && nav && navWrap) {
   });
 }
 
+const clientLogoGrid = document.querySelector(".client-logo-grid");
+
+if (clientLogoGrid && clientLogoGrid.children.length) {
+  const logoTrack = document.createElement("div");
+  const logoGroup = document.createElement("div");
+  logoTrack.className = "client-logo-track";
+  logoGroup.className = "client-logo-group";
+
+  [...clientLogoGrid.children].forEach((card) => logoGroup.appendChild(card));
+
+  const repeatedGroup = logoGroup.cloneNode(true);
+  repeatedGroup.setAttribute("aria-hidden", "true");
+  repeatedGroup.querySelectorAll("img").forEach((image) => {
+    image.alt = "";
+  });
+
+  logoTrack.append(logoGroup, repeatedGroup);
+  clientLogoGrid.appendChild(logoTrack);
+  clientLogoGrid.classList.add("is-logo-marquee");
+}
+
 const revealTargets = document.querySelectorAll(
   "main section:not(.hero):not(.page-hero):not(.members-section):not(.contact-page-intro):not(.contact-page-form-section), .service-card, .info-card, .timeline-card, .post-card, .model-stat, .about-stat, details, .photo-frame, .join-panel, .contact-card, .quote-panel"
 );
