@@ -3849,6 +3849,10 @@ body main > section.recruitment-snapshot-section,
   filter: brightness(.78) saturate(.7) contrast(.96);
 }
 
+.clients-hero-image {
+  filter: brightness(.84) saturate(.8) contrast(.98);
+}
+
 .hero::after,
 .page-hero::after {
   background:
@@ -3858,8 +3862,8 @@ body main > section.recruitment-snapshot-section,
 
 .clients-hero::after {
   background:
-    linear-gradient(90deg, rgba(10, 10, 12, .94) 0%, rgba(10, 10, 12, .8) 48%, rgba(10, 10, 12, .62) 100%),
-    linear-gradient(180deg, rgba(10, 10, 12, .32) 0%, rgba(10, 10, 12, .7) 100%);
+    linear-gradient(90deg, rgba(10, 10, 12, .52) 0%, rgba(10, 10, 12, .34) 48%, rgba(10, 10, 12, .22) 100%),
+    linear-gradient(180deg, rgba(10, 10, 12, .14) 0%, rgba(10, 10, 12, .58) 100%);
 }
 
 @media (max-width: 700px) {
@@ -3869,7 +3873,7 @@ body main > section.recruitment-snapshot-section,
   }
 
   .clients-hero::after {
-    background: linear-gradient(180deg, rgba(10, 10, 12, .58) 0%, rgba(10, 10, 12, .86) 48%, rgba(10, 10, 12, .96) 100%);
+    background: linear-gradient(180deg, rgba(10, 10, 12, .3) 0%, rgba(10, 10, 12, .56) 48%, rgba(10, 10, 12, .88) 100%);
   }
 }
 
