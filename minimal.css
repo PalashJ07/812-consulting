@@ -2636,6 +2636,69 @@ main > section.recruitment-guide-section {
   color: #fff;
 }
 
+.recruitment-window {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 30px 0 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.recruitment-window > div {
+  display: grid;
+  gap: 3px;
+  padding: 20px 24px 20px 0;
+}
+
+.recruitment-window > div + div {
+  padding-left: 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.recruitment-window span {
+  color: #eec8ce;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.recruitment-window time {
+  color: #fff;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.join-panel .recruitment-event-note {
+  max-width: 780px;
+  margin-bottom: 28px;
+  font-size: 14px;
+}
+
+.recruitment-overview small {
+  color: var(--m-crimson);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 560px) {
+  .recruitment-window {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .recruitment-window > div,
+  .recruitment-window > div + div {
+    padding: 16px 0;
+    border-left: 0;
+  }
+
+  .recruitment-window > div + div {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
 .faq-category:nth-child(even) {
   background: var(--m-blush);
 }
