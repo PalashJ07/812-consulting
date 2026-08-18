@@ -2512,7 +2512,7 @@ body {
   background: var(--m-paper);
 }
 
-main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section),
+main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section):not(.recruitment-snapshot-section),
 .clients-hero,
 .contact-studio-main {
   background-color: var(--m-paper);
