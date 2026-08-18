@@ -3814,6 +3814,34 @@ body main > section.recruitment-snapshot-section,
   }
 }
 
+@media (min-width: 921px) and (max-width: 1040px) {
+  .home-proof-layout {
+    align-items: start;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-proof-metrics {
+    width: 100%;
+  }
+
+  .site-footer-main {
+    gap: 42px 32px;
+    grid-template-columns: minmax(260px, 1.3fr) repeat(2, minmax(150px, 1fr));
+  }
+
+  .site-footer-contact {
+    grid-column: 2 / -1;
+  }
+
+  .clients-engagements-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .clients-engagements-layout .clients-engagements-intro {
+    position: static;
+  }
+}
+
 @media (max-width: 700px) {
   .project-examples-heading {
     margin-bottom: 36px;
@@ -4084,5 +4112,98 @@ body main > section.recruitment-snapshot-section,
 
   .engagement-panel {
     padding-left: 0;
+  }
+}
+
+/* Production alignment pass
+   Every page now resolves to the same content frame, hero rhythm, and grid behavior. */
+:where(
+  .section-grid,
+  .split-feature,
+  .about-story-grid,
+  .about-feature-grid,
+  .impact-layout,
+  .explore,
+  .home-proof-layout,
+  .home-sponsors-layout,
+  .clients-hero-grid,
+  .clients-engagements-layout,
+  .clients-inquiry-grid,
+  .contact-studio-grid,
+  .recruitment-guide-heading,
+  .recruitment-snapshot,
+  .site-footer-main
+) > * {
+  min-width: 0;
+}
+
+.home-feature-actions {
+  justify-content: flex-start;
+}
+
+.project-model-section > .container {
+  max-width: var(--ui-content);
+}
+
+.project-model-section .project-model {
+  max-width: none;
+}
+
+:where(.service-grid, .card-grid, .member-grid, .client-logo-grid) {
+  align-items: stretch;
+}
+
+:where(.service-card, .info-card, .about-pillar, .member-card, .client-logo-card) {
+  height: 100%;
+}
+
+.site-footer-main {
+  align-items: start;
+}
+
+@media (min-width: 701px) {
+  .page-hero,
+  .story-hero,
+  .members-hero,
+  .faq-hero {
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .page-hero .page-hero-content,
+  .story-hero .page-hero-content,
+  .members-hero .page-hero-content,
+  .faq-hero .page-hero-content {
+    padding-top: 80px;
+    padding-bottom: 48px;
+  }
+
+  .about-hero + .members-section {
+    padding-top: 96px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 920px) {
+  .page-hero .page-hero-content,
+  .story-hero .page-hero-content,
+  .members-hero .page-hero-content,
+  .faq-hero .page-hero-content {
+    min-height: clamp(476px, 68vw, 560px);
+  }
+}
+
+@media (min-width: 921px) {
+  .page-hero .page-hero-content,
+  .story-hero .page-hero-content,
+  .members-hero .page-hero-content,
+  .faq-hero .page-hero-content {
+    min-height: clamp(560px, 68vh, 640px);
+  }
+}
+
+@media (max-width: 700px) {
+  .home-feature-actions {
+    justify-content: stretch;
   }
 }
