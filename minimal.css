@@ -3043,40 +3043,30 @@ main > section.recruitment-guide-section {
 
 .nav-submenu-toggle {
   position: relative;
-  width: 24px;
+  width: 16px;
   height: 44px;
-  margin-left: -3px;
+  margin-left: 1px;
   padding: 0;
   border: 0;
   background: transparent;
-  color: #4f4b48;
+  color: #77716c;
   cursor: pointer;
 }
 
-.nav-submenu-toggle span,
-.nav-submenu-toggle span::after {
+.nav-submenu-toggle span {
   position: absolute;
   top: 50%;
-  width: 6px;
-  height: 1px;
-  background: currentColor;
-  content: "";
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translate(-50%, -65%) rotate(45deg);
   transition: transform 180ms ease;
 }
 
-.nav-submenu-toggle span {
-  left: 6px;
-  transform: rotate(45deg);
-}
-
-.nav-submenu-toggle span::after {
-  left: 4px;
-  transform: rotate(-90deg);
-  transform-origin: center;
-}
-
 .nav-item.submenu-open .nav-submenu-toggle span {
-  transform: rotate(-45deg);
+  transform: translate(-50%, -35%) rotate(225deg);
 }
 
 .nav-submenu {
@@ -3130,7 +3120,18 @@ main > section.recruitment-guide-section {
 
 @media (min-width: 921px) {
   .nav-links {
-    gap: clamp(10px, 1.4vw, 22px);
+    gap: clamp(16px, 1.8vw, 26px);
+  }
+
+  .nav-item:hover > .nav-submenu-toggle,
+  .nav-item:focus-within > .nav-submenu-toggle,
+  .nav-item.submenu-open > .nav-submenu-toggle {
+    color: var(--m-crimson);
+  }
+
+  .nav-item:hover > .nav-submenu-toggle span,
+  .nav-item:focus-within > .nav-submenu-toggle span {
+    transform: translate(-50%, -35%) rotate(225deg);
   }
 
   .nav-item:hover > .nav-submenu,
@@ -3169,7 +3170,7 @@ main > section.recruitment-guide-section {
   }
 
   .nav-submenu-toggle span {
-    left: 18px;
+    left: 50%;
   }
 
   .nav-submenu {

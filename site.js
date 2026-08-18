@@ -50,16 +50,6 @@ if (header && nav && navWrap) {
       ["Why Partner With Us", "clients.html#partner-overview"],
       ["Engagement Example", "clients.html#case-study"],
       ["Project Inquiry", "clients.html#project-inquiry"]
-    ],
-    "join.html": [
-      ["Membership", "join.html#membership"],
-      ["What We Look For", "join.html#what-we-look-for"],
-      ["Recruitment Process", "join.html#recruitment-process"]
-    ],
-    "faq.html": [
-      ["General", "faq.html#faq-general"],
-      ["Recruitment", "faq.html#faq-recruitment"],
-      ["Membership", "faq.html#faq-membership"]
     ]
   };
 
