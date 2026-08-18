@@ -457,16 +457,16 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
 
 /* Recruiting season navigation signal */
 .nav-links a.recruiting-live {
-  animation: recruitingPulse 2.8s ease-in-out infinite;
-  background: var(--m-crimson);
-  color: #fff;
-  padding: 11px 15px;
+  background: transparent;
 }
 
-.nav-links a.recruiting-live:hover,
-.nav-links a.recruiting-live.active {
-  background: var(--m-crimson-hover);
-  color: #fff;
+.nav-links a.recruiting-live::before {
+  position: absolute;
+  inset: -8px -10px;
+  border: 1px solid var(--m-crimson);
+  animation: recruitingPulse 2.8s ease-in-out infinite;
+  content: "";
+  pointer-events: none;
 }
 
 .nav-links a.recruiting-live::after {
@@ -482,14 +482,14 @@ details[open] { border-color: var(--m-line); box-shadow: none; }
   }
 }
 
-@media (max-width: 700px) {
-  .nav-links a.recruiting-live {
-    padding: 8px 11px;
+@media (max-width: 920px) {
+  .nav-links a.recruiting-live::before {
+    inset: 5px 7px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nav-links a.recruiting-live {
+  .nav-links a.recruiting-live::before {
     animation: none;
   }
 }
