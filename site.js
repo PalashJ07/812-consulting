@@ -39,6 +39,7 @@ if (header && nav && navWrap) {
     "services.html": [
       ["Capabilities", "services.html#capabilities"],
       ["Project Model", "services.html#project-model"],
+      ["Project Examples", "services.html#project-examples"],
       ["Past Clients", "services.html#clients"],
       ["Our Commitment", "services.html#commitment"]
     ],
