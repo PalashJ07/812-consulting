@@ -3532,7 +3532,7 @@ body main > section.recruitment-snapshot-section {
 }
 
 .faq-contact-cta {
-  background: var(--m-crimson-deep);
+  background: var(--m-dark);
   color: #fff;
   padding: clamp(58px, 7vw, 92px) 0;
 }
@@ -3561,17 +3561,17 @@ body main > section.recruitment-snapshot-section {
 }
 
 .faq-contact-button {
-  background: #fff;
-  border-color: #fff;
-  color: var(--m-crimson-deep);
+  background: var(--m-crimson);
+  border-color: var(--m-crimson);
+  color: #fff;
   min-width: 150px;
 }
 
 .faq-contact-button:hover,
 .faq-contact-button:focus-visible {
-  background: #f2dce0;
-  border-color: #f2dce0;
-  color: var(--m-crimson-deep);
+  background: var(--m-crimson-hover);
+  border-color: var(--m-crimson-hover);
+  color: #fff;
 }
 
 @media (max-width: 700px) {
