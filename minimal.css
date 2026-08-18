@@ -2636,10 +2636,11 @@ main > section.recruitment-guide-section {
   color: #fff;
 }
 
-.recruitment-snapshot-section {
+body main > section.recruitment-snapshot-section {
   padding: 0;
-  background: var(--m-crimson-deep);
-  color: rgba(255, 255, 255, 0.82);
+  background-color: #681421 !important;
+  background-image: none !important;
+  color: #fff;
 }
 
 .recruitment-snapshot {
@@ -2663,7 +2664,7 @@ main > section.recruitment-guide-section {
 .recruitment-snapshot-intro > p:last-child {
   max-width: 420px;
   margin: 18px 0 0;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.88);
   font-size: 14px;
 }
 
@@ -2716,7 +2717,7 @@ main > section.recruitment-guide-section {
 .recruitment-snapshot-footer p {
   max-width: 760px;
   margin: 0;
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(255, 255, 255, 0.88);
   font-size: 13px;
   line-height: 1.65;
 }
