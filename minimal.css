@@ -3917,7 +3917,39 @@ body main > section.recruitment-snapshot-section,
 
 /* Final homepage, Services hero, and engagement-library refinement. */
 .hero > img.home-hero-image {
-  object-position: center top;
+  object-position: center 66%;
+}
+
+.about-page-hero {
+  isolation: isolate;
+  background: #151517;
+}
+
+.about-page-hero::before {
+  position: absolute;
+  inset: -20px;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(15, 15, 17, 0.3), rgba(15, 15, 17, 0.05), rgba(15, 15, 17, 0.3)),
+    url("assets/team-staircase.png") center 40% / cover no-repeat;
+  content: "";
+  filter: blur(16px);
+  transform: scale(1.045);
+}
+
+.about-page-hero > img {
+  z-index: 1;
+  object-fit: contain;
+  object-position: center;
+}
+
+.about-page-hero::after {
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(5, 5, 7, 0.18), rgba(5, 5, 7, 0.68));
+}
+
+.about-page-hero .page-hero-content {
+  z-index: 3;
 }
 
 .services-hero .page-hero-copy {
@@ -4074,7 +4106,7 @@ body main > section.recruitment-snapshot-section,
 
 @media (max-width: 700px) {
   body > main > .hero:first-child > img.home-hero-image {
-    object-position: center 22%;
+    object-position: center center;
   }
 
   .services-hero h1 {
