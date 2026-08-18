@@ -2561,6 +2561,77 @@ main > section.recruitment-guide-section {
   color: rgba(255, 255, 255, 0.76);
 }
 
+.home-sponsors-section {
+  padding: clamp(50px, 5.5vw, 72px) 0;
+  border-bottom: 1px solid var(--m-line);
+}
+
+.home-sponsors-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.62fr) minmax(0, 1.38fr);
+  align-items: center;
+  gap: clamp(44px, 7vw, 92px);
+}
+
+.home-sponsors-copy h2 {
+  max-width: 430px;
+  margin-bottom: 14px;
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.home-sponsors-copy > p:last-child {
+  max-width: 430px;
+  margin: 0;
+  color: var(--m-muted);
+  font-size: 14px;
+}
+
+.home-sponsor-logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--m-line);
+  border-left: 1px solid var(--m-line);
+}
+
+.home-sponsor-card {
+  display: flex;
+  min-height: 118px;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  border-right: 1px solid var(--m-line);
+  border-bottom: 1px solid var(--m-line);
+  background: #fff;
+}
+
+.home-sponsor-card img {
+  width: min(100%, 150px);
+  height: 62px;
+  object-fit: contain;
+}
+
+@media (max-width: 920px) {
+  .home-sponsors-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .home-sponsor-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-sponsor-card {
+    min-height: 104px;
+    padding: 18px;
+  }
+
+  .home-sponsor-card img {
+    width: min(100%, 126px);
+    height: 56px;
+  }
+}
+
 .service-card,
 .info-card,
 .about-pillar {
