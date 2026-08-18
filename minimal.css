@@ -135,6 +135,7 @@ section { padding: 96px 0; }
   object-fit: contain;
   object-position: center;
 }
+.client-logo-card img[src$="/oracle.png"] { transform: scale(1.18); }
 .client-logo-card:last-child:nth-child(3n + 1) { grid-column: auto; }
 .client-logo-card:hover { border: 0; box-shadow: 0 12px 30px rgba(55, 43, 37, 0.055); transform: none; }
 .past-clients-section { background: var(--m-soft); }
