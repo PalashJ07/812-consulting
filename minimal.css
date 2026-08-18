@@ -4414,3 +4414,15 @@ body main > section.recruitment-snapshot-section,
     min-height: clamp(590px, 72vh, 660px);
   }
 }
+
+/* FAQ hero: favor the portrait subjects over the empty space above them. */
+.faq-hero > img {
+  object-position: center 40%;
+}
+
+@media (min-width: 701px) {
+  .faq-hero,
+  .faq-hero .page-hero-content {
+    min-height: clamp(590px, 72vh, 660px);
+  }
+}
