@@ -3531,61 +3531,7 @@ body main > section.recruitment-snapshot-section {
   transform: translateY(-2px);
 }
 
-.faq-contact-cta {
-  background: var(--m-dark);
-  color: #fff;
-  padding: clamp(58px, 7vw, 92px) 0;
-}
-
-.faq-contact-cta-inner {
-  align-items: end;
-  display: grid;
-  gap: 40px;
-  grid-template-columns: minmax(0, 1fr) auto;
-}
-
-.faq-contact-cta .kicker {
-  color: #eec8ce;
-  margin-bottom: 16px;
-}
-
-.faq-contact-cta h2 {
-  color: #fff;
-  margin-bottom: 14px;
-}
-
-.faq-contact-cta-copy > p:last-child {
-  color: rgba(255, 255, 255, 0.78);
-  margin: 0;
-  max-width: 680px;
-}
-
-.faq-contact-button {
-  background: var(--m-crimson);
-  border-color: var(--m-crimson);
-  color: #fff;
-  min-width: 150px;
-}
-
-.faq-contact-button:hover,
-.faq-contact-button:focus-visible {
-  background: var(--m-crimson-hover);
-  border-color: var(--m-crimson-hover);
-  color: #fff;
-}
-
 @media (max-width: 700px) {
-  .faq-contact-cta-inner {
-    align-items: start;
-    gap: 28px;
-    grid-template-columns: 1fr;
-  }
-
-  .faq-contact-button {
-    justify-content: center;
-    width: 100%;
-  }
-
   .site-footer-contact-cta {
     min-height: 48px;
   }
@@ -3614,7 +3560,7 @@ body,
 }
 
 /* Keep the reading surface continuous instead of alternating full-width colors. */
-body main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section):not(.recruitment-snapshot-section):not(.about-feature-section):not(.faq-contact-cta),
+body main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section):not(.recruitment-snapshot-section):not(.about-feature-section),
 body main > section.soft-section,
 body main > section.about-story-section,
 body main > section.about-impact-section,
@@ -3627,7 +3573,7 @@ body main > .hero + section {
   background: var(--m-paper) !important;
 }
 
-body main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section):not(.recruitment-snapshot-section):not(.about-feature-section):not(.faq-contact-cta) {
+body main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section):not(.recruitment-snapshot-section):not(.about-feature-section) {
   border-top: 1px solid var(--m-line);
 }
 
@@ -3671,8 +3617,7 @@ body main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-
 .home-proof-section,
 body main > section.recruitment-snapshot-section,
 .about-feature-section,
-.project-model-section,
-.faq-contact-cta {
+.project-model-section {
   background: var(--m-dark) !important;
 }
 
@@ -3683,17 +3628,14 @@ body main > section.recruitment-snapshot-section,
   border-top: 0;
 }
 
-.recruitment-snapshot-section .button,
-.faq-contact-button {
+.recruitment-snapshot-section .button {
   background: var(--m-crimson);
   border-color: var(--m-crimson);
   color: #fff;
 }
 
 .recruitment-snapshot-section .button:hover,
-.recruitment-snapshot-section .button:focus-visible,
-.faq-contact-button:hover,
-.faq-contact-button:focus-visible {
+.recruitment-snapshot-section .button:focus-visible {
   background: var(--m-crimson-hover);
   border-color: var(--m-crimson-hover);
   color: #fff;
@@ -3733,7 +3675,7 @@ body main > section.recruitment-snapshot-section,
 }
 
 @media (max-width: 700px) {
-  body main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section):not(.recruitment-snapshot-section):not(.about-feature-section):not(.faq-contact-cta) {
+  body main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section):not(.recruitment-snapshot-section):not(.about-feature-section) {
     border-top-color: rgba(28, 28, 31, 0.1);
   }
 }
