@@ -30,28 +30,28 @@ if (header && nav && navWrap) {
   navWrap.insertBefore(toggle, nav);
 
   const dropdownMenus = {
-    "about.html": [
-      ["Our Story", "about.html#our-story"],
-      ["Our Mission", "about.html#mission"],
-      ["What Sets Us Apart", "about.html#pillars"],
-      ["Student Experience", "about.html#student-experience"]
+    "/about/": [
+      ["Our Story", "/about/#our-story"],
+      ["Our Mission", "/about/#mission"],
+      ["What Sets Us Apart", "/about/#pillars"],
+      ["Student Experience", "/about/#student-experience"]
     ],
-    "services.html": [
-      ["Capabilities", "services.html#capabilities"],
-      ["Project Model", "services.html#project-model"],
-      ["Project Examples", "services.html#project-examples"],
-      ["Past Clients", "services.html#clients"],
-      ["Our Commitment", "services.html#commitment"]
+    "/services/": [
+      ["Capabilities", "/services/#capabilities"],
+      ["Project Model", "/services/#project-model"],
+      ["Project Examples", "/services/#project-examples"],
+      ["Past Clients", "/services/#clients"],
+      ["Our Commitment", "/services/#commitment"]
     ],
-    "members.html": [
-      ["Executive Board", "members.html#executive-board"],
-      ["Full Roster", "members.html#member-directory-title"]
+    "/members/": [
+      ["Executive Board", "/members/#executive-board"],
+      ["Full Roster", "/members/#member-directory-title"]
     ],
-    "clients.html": [
-      ["Why Partner With Us", "clients.html#partner-overview"],
-      ["Engagement Example", "clients.html#case-study"],
-      ["Client Questions", "clients.html#client-questions"],
-      ["Project Inquiry", "clients.html#project-inquiry"]
+    "/clients/": [
+      ["Why Partner With Us", "/clients/#partner-overview"],
+      ["Engagement Example", "/clients/#case-study"],
+      ["Client Questions", "/clients/#client-questions"],
+      ["Project Inquiry", "/clients/#project-inquiry"]
     ]
   };
 
