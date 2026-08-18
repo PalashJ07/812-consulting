@@ -3590,3 +3590,150 @@ body main > section.recruitment-snapshot-section {
     min-height: 48px;
   }
 }
+
+/* Professional surface system
+   Neutral surfaces carry content; charcoal establishes authority; crimson signals action. */
+:root {
+  --m-paper: #f7f7f5;
+  --m-soft: #f1f0ed;
+  --m-limestone: #e9e7e2;
+  --m-blush: #f7f7f5;
+  --m-line: #d8d7d2;
+  --m-dark: #1c1c1f;
+  --m-crimson-deep: #6f1724;
+}
+
+html,
+body,
+.contact-studio-main {
+  background: var(--m-paper);
+}
+
+.contact-studio-main {
+  background: var(--m-paper) !important;
+}
+
+/* Keep the reading surface continuous instead of alternating full-width colors. */
+body main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section):not(.recruitment-snapshot-section):not(.about-feature-section):not(.faq-contact-cta),
+body main > section.soft-section,
+body main > section.about-story-section,
+body main > section.about-impact-section,
+body main > section.past-clients-section,
+body main > section.clients-engagements,
+body main > section.clients-inquiry-section,
+body main > section.contact-studio,
+body main > section.recruitment-guide-section,
+body main > .hero + section {
+  background: var(--m-paper) !important;
+}
+
+body main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section):not(.recruitment-snapshot-section):not(.about-feature-section):not(.faq-contact-cta) {
+  border-top: 1px solid var(--m-line);
+}
+
+/* Uniform content surfaces replace decorative every-other-card fills. */
+.service-card,
+.service-card:nth-child(even),
+.info-card,
+.info-card:nth-child(even),
+.about-pillar,
+.about-pillar:nth-child(even),
+.contact-card,
+.engagement-card,
+.contact-studio-card,
+.clients-inquiry-form {
+  background: #fff;
+}
+
+.faq-category,
+.faq-category:nth-child(even) {
+  background: transparent;
+}
+
+.faq-category:nth-child(even) .faq-category-heading,
+.faq-category:nth-child(even) .faq-category-questions {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.card-grid,
+.service-grid,
+.about-pillars {
+  background: #fff;
+}
+
+.client-logo-card {
+  background: #fff;
+  box-shadow: none;
+}
+
+/* Dark bands are reserved for proof, process, and closing calls to action. */
+.home-proof-section,
+body main > section.recruitment-snapshot-section,
+.about-feature-section,
+.project-model-section,
+.faq-contact-cta {
+  background: var(--m-dark) !important;
+}
+
+.home-proof-section,
+body main > section.recruitment-snapshot-section,
+.about-feature-section,
+.project-model-section {
+  border-top: 0;
+}
+
+.recruitment-snapshot-section .button,
+.faq-contact-button {
+  background: var(--m-crimson);
+  border-color: var(--m-crimson);
+  color: #fff;
+}
+
+.recruitment-snapshot-section .button:hover,
+.recruitment-snapshot-section .button:focus-visible,
+.faq-contact-button:hover,
+.faq-contact-button:focus-visible {
+  background: var(--m-crimson-hover);
+  border-color: var(--m-crimson-hover);
+  color: #fff;
+}
+
+.recruitment-snapshot-section .button.secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.48);
+  color: #fff;
+}
+
+/* Client proof and contact identifiers use restrained accents rather than color blocks. */
+.clients-hero-proof {
+  background: rgba(20, 20, 22, 0.9);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.contact-studio-code {
+  background: transparent;
+  border-left: 2px solid var(--m-crimson);
+  color: var(--m-crimson);
+  padding: 2px 0 2px 12px;
+}
+
+.members-section {
+  background: var(--m-paper) !important;
+}
+
+/* The footer is the single consistent page ending across the site. */
+.site-footer {
+  background: var(--m-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer-main {
+  padding-top: clamp(56px, 6vw, 76px);
+}
+
+@media (max-width: 700px) {
+  body main > section:not(.hero):not(.page-hero):not(.dark-panel):not(.home-proof-section):not(.recruitment-snapshot-section):not(.about-feature-section):not(.faq-contact-cta) {
+    border-top-color: rgba(28, 28, 31, 0.1);
+  }
+}
