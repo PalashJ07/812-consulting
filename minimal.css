@@ -4397,3 +4397,8 @@ body main > section.recruitment-snapshot-section,
     padding: 0 34px 24px 2px;
   }
 }
+
+/* Members hero: raise the group within the panoramic crop. */
+.members-hero > img {
+  object-position: center 68%;
+}
