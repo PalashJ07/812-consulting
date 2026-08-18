@@ -3737,3 +3737,12 @@ body main > section.recruitment-snapshot-section,
     border-top-color: rgba(28, 28, 31, 0.1);
   }
 }
+
+/* Improve primary navigation readability without crowding dropdown content. */
+@media (min-width: 921px) {
+  .nav-links > a,
+  .nav-links > .nav-item > a {
+    font-size: 12px;
+    letter-spacing: 0.07em;
+  }
+}
