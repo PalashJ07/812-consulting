@@ -3932,7 +3932,7 @@ body main > section.recruitment-snapshot-section,
   z-index: 0;
   background:
     linear-gradient(90deg, rgba(15, 15, 17, 0.3), rgba(15, 15, 17, 0.05), rgba(15, 15, 17, 0.3)),
-    url("assets/presentation-team-wide.jpg") center 76% / cover no-repeat;
+    url("assets/presentation-team-wide.jpg") center 74% / cover no-repeat;
   content: "";
   filter: blur(16px);
   transform: scale(1.045);
@@ -3941,7 +3941,8 @@ body main > section.recruitment-snapshot-section,
 .about-page-hero > img {
   z-index: 1;
   object-fit: cover;
-  object-position: center 76%;
+  object-position: center 74%;
+  transform: scale(1.025) translate(1.2%, 0.6%);
 }
 
 .about-page-hero::after {
