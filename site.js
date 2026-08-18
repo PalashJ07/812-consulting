@@ -50,6 +50,7 @@ if (header && nav && navWrap) {
     "clients.html": [
       ["Why Partner With Us", "clients.html#partner-overview"],
       ["Engagement Example", "clients.html#case-study"],
+      ["Client Questions", "clients.html#client-questions"],
       ["Project Inquiry", "clients.html#project-inquiry"]
     ]
   };
