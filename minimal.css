@@ -4399,7 +4399,14 @@ body main > section.recruitment-snapshot-section,
   }
 }
 
-/* Members hero: raise the group within the panoramic crop. */
+/* Members hero: show more of the portrait and keep every face inside the crop. */
 .members-hero > img {
-  object-position: center 68%;
+  object-position: center 64%;
+}
+
+@media (min-width: 701px) {
+  .members-hero,
+  .members-hero .page-hero-content {
+    min-height: clamp(590px, 72vh, 660px);
+  }
 }
