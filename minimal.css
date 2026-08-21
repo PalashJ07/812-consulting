@@ -4561,3 +4561,8 @@ body main > section.recruitment-snapshot-section,
     min-height: clamp(590px, 72vh, 660px);
   }
 }
+
+/* About feature photo: keep the new-member class's top row fully in frame. */
+.about-feature-photo > img {
+  object-position: center 30%;
+}
