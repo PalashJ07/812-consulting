@@ -4500,7 +4500,12 @@ body main > section.recruitment-snapshot-section,
 
 /* Members hero: show more of the portrait and keep every face inside the crop. */
 .members-hero > img {
-  object-position: center 64%;
+  object-position: center 46%;
+}
+
+/* Recruitment hero: center the group within the responsive crop. */
+.join-hero > img {
+  object-position: 42% 42%;
 }
 
 @media (min-width: 701px) {
